@@ -3,7 +3,9 @@
 
 //This is the visal in the menu where the cursor grabs enemies from
 
+event_inherited()
+
 can_be_grabbed = false
 
 _id = 0
-offset = 512
+x_pos = 896

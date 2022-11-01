@@ -3,4 +3,10 @@
 
 event_inherited()
 
+image_index = food_id
+
+//x = 100
+//y = 100
+
+
 

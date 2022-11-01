@@ -1,20 +1,14 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_money_button",
-  "spriteId": {
-    "name": "spr_money_button",
-    "path": "sprites/spr_money_button/spr_money_button.yy",
-  },
+  "name": "obj_menu_item",
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "obj_menu_item",
-    "path": "objects/obj_menu_item/obj_menu_item.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
