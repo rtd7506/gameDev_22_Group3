@@ -26,12 +26,12 @@ if keyboard_check(ord("S")){
     }
 }
 if hitting{ //Slow down player when swinging
-	mspd = 3
+	mspd = 1.5
 }else{
-	mspd = 5
+	mspd = 2.5
 }
 
-if collision_circle(x,y,32,obj_enemy,false,false) && !hurt{ //Detect when hurt by enemy
+if collision_circle(x,y,16,obj_enemy,false,false) && !hurt{ //Detect when hurt by enemy
 	//show_debug_message("GOT HURT")
 	hurt = true;
 	var en = instance_nearest(x,y,obj_enemy)
@@ -43,7 +43,7 @@ if collision_circle(x,y,32,obj_enemy,false,false) && !hurt{ //Detect when hurt b
 	}
 }
 if hurt{
-	mspd = -5
+	mspd = -2.5
 	move_dir = lerp(move_dir,hurt_dir,0.5)
 	image_blend = c_red
 }else{

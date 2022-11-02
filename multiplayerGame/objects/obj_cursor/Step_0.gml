@@ -18,12 +18,18 @@ if mouse_check_button_pressed(mb_left){ //Do all mouse interactions
 			tab = instance_nearest(x,y,obj_tab)
 		}
 		obj_menu.screen = tab._id
-		show_debug_message(string(obj_menu.screen))
+		//show_debug_message(string(obj_menu.screen))
 	}
 	
 	if place_meeting(x,y,obj_money_button){
 		//var tab = instance_nearest(x,y,obj_tab)
 		//obj_menu.screen = tab._id
 		MONEY += 10
+	}
+	if place_meeting(x,y,obj_food_item){
+		var food_item = instance_nearest(x,y,obj_food_item)
+		if food_item.can_be_grabbed{
+			food_item.grabbed = true
+		}
 	}
 }

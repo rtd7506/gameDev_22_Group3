@@ -12,7 +12,7 @@ if place_meeting(x,y,obj_slash) && !hit && can_be_hit{ //Detect hit
 if hit{
 	image_blend = c_red
 	move_dir = hit_dir
-	mspd = -10 //Hit knockback
+	mspd = -5 //Hit knockback
 }else{
 	image_blend = c_white
 	if mspd < 1{

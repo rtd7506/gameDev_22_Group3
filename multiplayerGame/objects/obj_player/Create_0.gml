@@ -1,7 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-mspd = 5
+randomize()
+
+mspd = 2.5
 
 move_dir = 0
 
@@ -13,7 +15,7 @@ y_remainder = 0
 
 bumped_into_something = false
 
-slash_dist = 40
+slash_dist = 20
 
 hitting = false
 hit_x = slash_dist

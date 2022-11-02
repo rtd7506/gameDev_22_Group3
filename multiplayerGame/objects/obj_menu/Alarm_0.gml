@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-offset = 512
-x_offset = 0
+instance_create_depth(960,545,301,obj_customer)
+
+
