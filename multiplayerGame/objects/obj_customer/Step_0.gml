@@ -16,7 +16,7 @@ if obj_menu.screen == _id{
 		if food.falling && food.food_id == want && !leaving{
 			leaving = true
 			active = false
-			MONEY += 100
+			AddMoney(x,y,100)
 		}
 	}
 	if leaving{

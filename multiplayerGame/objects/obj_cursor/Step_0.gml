@@ -1,9 +1,21 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-x = mouse_x //Follow cursor
-y = mouse_y
-
+if !boss{
+	x = mouse_x //Follow cursor
+	y = mouse_y
+}else{
+	move_dir = point_direction(x,y,mouse_x,mouse_y)
+	hspd = lengthdir_x(mspd,move_dir)
+	vspd = lengthdir_y(mspd,move_dir)
+	x += hspd
+	y += vspd
+	//MoveCollide()
+	
+	x = clamp(x,80,690)
+	y = clamp(y,140,600)
+	
+}
 if mouse_check_button_pressed(mb_left){ //Do all mouse interactions
 	if place_meeting(x,y,obj_menu_enemy_vis){
 		var menu_vis = instance_nearest(x,y,obj_menu_enemy_vis)
@@ -24,7 +36,7 @@ if mouse_check_button_pressed(mb_left){ //Do all mouse interactions
 	if place_meeting(x,y,obj_money_button){
 		//var tab = instance_nearest(x,y,obj_tab)
 		//obj_menu.screen = tab._id
-		MONEY += 10
+		AddMoney(x,y,10)
 	}
 	if place_meeting(x,y,obj_food_item){
 		var food_item = instance_nearest(x,y,obj_food_item)

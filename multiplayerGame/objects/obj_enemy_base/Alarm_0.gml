@@ -1,6 +1,8 @@
 /// @description Stop hit
 // You can write your code in this editor
 
-event_inherited()
-
+hit = false
+if _health < 1{
+	instance_destroy()
+}
 

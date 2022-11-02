@@ -18,3 +18,6 @@ alarm[0] = 1
 globalvar MONEY;
 MONEY = 150;
 alarm[1] = 120
+
+stage = 0
+done = false

@@ -1,19 +1,16 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_enemy",
-  "spriteId": {
-    "name": "spr_enemy",
-    "path": "sprites/spr_enemy/spr_enemy.yy",
-  },
+  "name": "obj_enemy_base",
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_enemy_base",
-    "path": "objects/obj_enemy_base/obj_enemy_base.yy",
+    "name": "obj_collidable",
+    "path": "objects/obj_collidable/obj_collidable.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
