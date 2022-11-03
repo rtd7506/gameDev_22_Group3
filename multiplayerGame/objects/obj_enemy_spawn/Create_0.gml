@@ -5,5 +5,5 @@ hit = false
 hit_dir = 0
 can_be_hit = true
 
-_health = 3
+_health = 4
 just_spawned = false
