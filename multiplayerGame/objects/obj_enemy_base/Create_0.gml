@@ -20,3 +20,4 @@ hit_dir = 0
 can_be_hit = true
 
 _health = 2
+health_max = _health

@@ -19,5 +19,15 @@ globalvar MONEY;
 MONEY = 150;
 alarm[1] = 120
 
+globalvar PLAYER_MONEY;
+PLAYER_MONEY = 0;
+
+
 stage = 0
 done = false
+
+for (var i=0; i < 2; i++){
+	for (var j=0; j < 2; j++){
+		instance_create_layer(208+i*352,272+j*224,"Enemies",obj_gate)
+	}
+}

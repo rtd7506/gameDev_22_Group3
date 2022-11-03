@@ -5,6 +5,8 @@
 
 grabbed = false
 
-
+cost = 50
+type = obj_enemy
+offset = 0
 //spawn_x = x
 //spawn_y = y

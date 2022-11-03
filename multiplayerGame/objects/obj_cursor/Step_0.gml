@@ -20,7 +20,7 @@ if mouse_check_button_pressed(mb_left){ //Do all mouse interactions
 	if place_meeting(x,y,obj_menu_enemy_vis){
 		var menu_vis = instance_nearest(x,y,obj_menu_enemy_vis)
 		if menu_vis.can_be_grabbed{
-			var menu_en = instance_create_depth(x,y,-1000,obj_menu_enemy)
+			var menu_en = instance_create_depth(x,y,-1000,menu_vis.type)
 			menu_en.grabbed = true
 		}
 	}

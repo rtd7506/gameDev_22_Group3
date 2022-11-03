@@ -3,7 +3,7 @@
 
 event_inherited()
 
-if MONEY >= 50{
+if MONEY >= cost{
 	can_be_grabbed = true
 }else{
 	can_be_grabbed = false

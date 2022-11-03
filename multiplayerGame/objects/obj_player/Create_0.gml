@@ -25,6 +25,7 @@ hurt = false
 hurt_dir = 0
 can_be_hurt = true
 
-_health = 5
+_health = 10
+health_max = _health
 
 depth = -100

@@ -12,3 +12,6 @@ x_pos = 860
 
 image_xscale = 2
 image_yscale = 2
+
+cost = 50
+type = obj_menu_enemy

@@ -3,4 +3,4 @@
 
 draw_self()
 
-draw_healthbar(x-32,y-54,x+32,y-40,_health*20,c_black,c_red,c_green,0,true,true)
+draw_healthbar(x-32,y-54,x+32,y-40,_health*100/health_max,c_black,c_red,c_green,0,true,true)

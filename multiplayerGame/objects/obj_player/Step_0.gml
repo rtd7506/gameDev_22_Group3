@@ -30,16 +30,31 @@ if hitting{ //Slow down player when swinging
 }else{
 	mspd = 2.5
 }
-
-if collision_circle(x,y,16,obj_enemy,false,false) && !hurt{ //Detect when hurt by enemy
-	//show_debug_message("GOT HURT")
-	hurt = true;
-	var en = instance_nearest(x,y,obj_enemy)
-	hurt_dir = point_direction(x,y,en.x,en.y)
-	alarm[1] = 10
-	_health -= 1
-	if (_health < 1){
-		room_restart()
+if !hurt && can_be_hurt{
+	if collision_circle(x,y,16,obj_enemy_spawnee,false,false){ //Detect when hurt by enemy
+		//show_debug_message("GOT HURT")
+		hurt = true;
+		can_be_hurt = false
+		var en = instance_nearest(x,y,obj_enemy_spawnee)
+		hurt_dir = point_direction(x,y,en.x,en.y)
+		alarm[1] = 10
+		alarm[2] = 30
+		_health -= 1
+		if (_health < 1){
+			room_restart()
+		}
+	}else if collision_circle(x,y,16,obj_enemy,false,false){ //Detect when hurt by enemy
+		//show_debug_message("GOT HURT")
+		hurt = true;
+		can_be_hurt = false
+		var en = instance_nearest(x,y,obj_enemy)
+		hurt_dir = point_direction(x,y,en.x,en.y)
+		alarm[1] = 10
+		alarm[2] = 30
+		_health -= 2
+		if (_health < 1){
+			room_restart()
+		}
 	}
 }
 if hurt{
