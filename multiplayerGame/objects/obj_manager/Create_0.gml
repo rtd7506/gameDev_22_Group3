@@ -25,9 +25,21 @@ PLAYER_MONEY = 0;
 
 stage = 0
 done = false
+shop = false
 
 for (var i=0; i < 2; i++){
 	for (var j=0; j < 2; j++){
 		instance_create_layer(208+i*352,272+j*224,"Enemies",obj_gate)
 	}
 }
+
+layer_set_visible(layer_get_id("Tiles_Dungeon"),!shop)
+	layer_set_visible(layer_get_id("Tiles_Shop"),shop)
+	
+	if !shop{
+		instance_activate_layer(layer_get_id("tile_collisions"))
+		instance_deactivate_layer(layer_get_id("tile_collisions_shop"))
+	}else{
+		instance_activate_layer(layer_get_id("tile_collisions_shop"))
+		instance_deactivate_layer(layer_get_id("tile_collisions"))
+	}

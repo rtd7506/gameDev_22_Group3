@@ -7,4 +7,3 @@ if instance_number(obj_gate) < 1 && !done{
 	instance_create_layer(384,128,"Enemies",obj_exit)
 }
 
-
