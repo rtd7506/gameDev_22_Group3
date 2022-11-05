@@ -77,38 +77,17 @@ or hurt{        // if pressing any move keys, move player!
 }
 
 
-if (keyboard_check_pressed(vk_space) && hitting == false){
+if (keyboard_check_pressed(vk_space) && hitting == false && !place_meeting(x,y,obj_shop_panel)){
 	hitting = true
-	/*
-	if keyboard_check(ord("W"))
-	or keyboard_check(ord("A"))
-	or keyboard_check(ord("S"))
-	or keyboard_check(ord("D")){        // if pressing any move keys, move player!
-		if keyboard_check(ord("A")){
-			hit_x = -slash_dist
-		}else if keyboard_check(ord("D")){
-			hit_x = slash_dist
-		}else{
-			hit_x = 0
-		}
-		if keyboard_check(ord("W")){
-			hit_y = -slash_dist
-		}else if keyboard_check(ord("S")){
-			hit_y = slash_dist
-		}else{
-			hit_y = 0
-		}
+	if curr_weapon == 0{
+		hit_x = lengthdir_x(slash_dist,move_dir)   
+		hit_y = lengthdir_y(slash_dist,move_dir)
+		var slash = instance_create_depth(x+hit_x,y+hit_y,-1000,obj_slash) //Create slash hitbox
+		slash.hit_x = hit_x
+		slash.hit_y = hit_y
+		slash.image_angle = move_dir+90
+		alarm[0] = 30
 	}
-	*/
-	
-	hit_x = lengthdir_x(slash_dist,move_dir)   
-	hit_y = lengthdir_y(slash_dist,move_dir)
-
-	var slash = instance_create_depth(x+hit_x,y+hit_y,-1000,obj_slash) //Create slash hitbox
-	slash.hit_x = hit_x
-	slash.hit_y = hit_y
-	slash.image_angle = move_dir+90
-	alarm[0] = 30
 }
 
 

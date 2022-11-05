@@ -28,4 +28,6 @@ can_be_hurt = true
 _health = 10
 health_max = _health
 
+curr_weapon = 0
+
 depth = -100

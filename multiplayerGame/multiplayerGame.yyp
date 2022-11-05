@@ -12,6 +12,7 @@
     {"id":{"name":"ts_village","path":"tilesets/ts_village/ts_village.yy",},"order":0,},
     {"id":{"name":"obj_customer","path":"objects/obj_customer/obj_customer.yy",},"order":7,},
     {"id":{"name":"spr_enemy_spawner","path":"sprites/spr_enemy_spawner/spr_enemy_spawner.yy",},"order":16,},
+    {"id":{"name":"Store_Font","path":"fonts/Store_Font/Store_Font.yy",},"order":0,},
     {"id":{"name":"obj_slash","path":"objects/obj_slash/obj_slash.yy",},"order":10,},
     {"id":{"name":"spr_menu","path":"sprites/spr_menu/spr_menu.yy",},"order":9,},
     {"id":{"name":"spr_shop_item","path":"sprites/spr_shop_item/spr_shop_item.yy",},"order":18,},
