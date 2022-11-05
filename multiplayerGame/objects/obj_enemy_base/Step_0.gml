@@ -9,6 +9,17 @@ if place_meeting(x,y,obj_slash) && !hit && can_be_hit{ //Detect hit
 	_health -= 1
 }
 
+if place_meeting(x,y,obj_projectile_player){
+	hit = true
+	var proj = instance_nearest(x,y,obj_projectile_player)
+	hit_dir = point_direction(x,y,proj.x,proj.y)
+	instance_destroy(proj)
+	alarm[0] = 5
+	_health -= 2
+	
+}
+
+
 if hit{
 	image_blend = c_red
 }else{

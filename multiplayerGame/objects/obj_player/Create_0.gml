@@ -28,6 +28,12 @@ can_be_hurt = true
 _health = 10
 health_max = _health
 
-curr_weapon = 0
+curr_slot = 0
+weapon_inventory = ["Sword","Crossbow","Mace"]
+curr_weapon = weapon_inventory[curr_slot]
+weapon_names = ["Sword","Crossbow","Mace"]
+show_switch_text = false
+
+shot_dist = 30
 
 depth = -100

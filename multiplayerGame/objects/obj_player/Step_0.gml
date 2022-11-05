@@ -78,8 +78,8 @@ or hurt{        // if pressing any move keys, move player!
 
 
 if (keyboard_check_pressed(vk_space) && hitting == false && !place_meeting(x,y,obj_shop_panel)){
-	hitting = true
-	if curr_weapon == 0{
+	if curr_weapon == "Sword"{
+		hitting = true
 		hit_x = lengthdir_x(slash_dist,move_dir)   
 		hit_y = lengthdir_y(slash_dist,move_dir)
 		var slash = instance_create_depth(x+hit_x,y+hit_y,-1000,obj_slash) //Create slash hitbox
@@ -87,7 +87,24 @@ if (keyboard_check_pressed(vk_space) && hitting == false && !place_meeting(x,y,o
 		slash.hit_y = hit_y
 		slash.image_angle = move_dir+90
 		alarm[0] = 30
+	}else if curr_weapon == "Crossbow"{
+		hitting = true
+		hit_x = lengthdir_x(shot_dist,move_dir)   
+		hit_y = lengthdir_y(shot_dist,move_dir)
+		var shot = instance_create_depth(x+hit_x,y+hit_y,-1000,obj_projectile_player)
+		shot.move_dir = move_dir
+		shot.image_angle = move_dir+90
+		alarm[0] = 30
 	}
 }
 
+if keyboard_check_pressed(ord("Q")) && array_length(weapon_inventory) > 1{
+	curr_slot += 1
+	if curr_slot > array_length(weapon_inventory)-1{
+		curr_slot = 0
+	}
+	show_switch_text = true
+	curr_weapon = weapon_inventory[curr_slot]
+	alarm[3] = 60
+}
 
