@@ -5,7 +5,12 @@ draw_self()
 draw_set_color(c_white)
 draw_set_font(Store_Font)
 if place_meeting(x,y,obj_player){
-	draw_text(x+100,y,title_text_options[_type])
+	
+	if _type == 1{
+		draw_text(x+100,y,"Buy "+item)
+	}else{
+		draw_text(x+100,y,title_text_options[_type])
+	}
 	draw_text(x+250,y,"Cost: $"+string(cost))
 	if PLAYER_MONEY < cost{
 		draw_set_color(c_red)
@@ -26,6 +31,14 @@ if place_meeting(x,y,obj_player){
 			}
 		}else if _type == 1{
 			PLAYER_MONEY -= cost
+			array_push(obj_player.weapon_inventory,item)
+			obj_player.curr_slot += 1
+			if obj_player.curr_slot > array_length(obj_player.weapon_inventory)-1{
+				obj_player.curr_slot = 0
+			}
+			obj_player.show_switch_text = true
+			obj_player.curr_weapon = obj_player.weapon_inventory[obj_player.curr_slot]
+			obj_player.alarm[3] = 60
 			instance_destroy()
 		}else if _type == 2{
 			PLAYER_MONEY -= cost
