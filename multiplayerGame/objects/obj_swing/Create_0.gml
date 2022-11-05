@@ -1,8 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-event_inherited()
+
+alarm[0] = 40
 
 
-if !place_meeting(x,y,obj_slash){
-	can_be_hit = true
-}

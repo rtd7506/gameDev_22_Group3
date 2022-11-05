@@ -17,18 +17,24 @@ if place_meeting(x,y,obj_player){
 	
 	
 	if keyboard_check_pressed(vk_space) && PLAYER_MONEY >= cost{
-		PLAYER_MONEY -= cost
 		if _type == 0{
-			obj_player._health += 3
-			obj_player._health = clamp(obj_player._health,0,obj_player.health_max)
+			if obj_player._health < obj_player.health_max{
+				obj_player._health += 3
+				obj_player._health = clamp(obj_player._health,0,obj_player.health_max)
+				PLAYER_MONEY -= cost
+				instance_destroy()
+			}
 		}else if _type == 1{
-			
+			PLAYER_MONEY -= cost
+			instance_destroy()
 		}else if _type == 2{
-
+			PLAYER_MONEY -= cost
+			instance_destroy()
 		}else{
-			
+			PLAYER_MONEY -= cost
+			instance_destroy()
 		}
-		instance_destroy()
+		
 	}
 }
 

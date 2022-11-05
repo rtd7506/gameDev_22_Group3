@@ -23,4 +23,6 @@ spawn_count+= 1
 if spawn_count > spawn_limit-1{
 	instance_destroy()
 }
-alarm[1] = spawnDelay
+alarm[2] = spawnDelay
+
+
