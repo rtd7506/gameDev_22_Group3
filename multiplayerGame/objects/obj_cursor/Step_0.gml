@@ -44,4 +44,18 @@ if mouse_check_button_pressed(mb_left){ //Do all mouse interactions
 			food_item.grabbed = true
 		}
 	}
+	if place_meeting(x,y,obj_choose_option){
+		var option = instance_nearest(x,y,obj_choose_option)
+		if option.choice{
+			MONEY += 50
+			instance_destroy(option)
+			obj_menu.option_next = true
+		}
+	}
+	if place_meeting(x,y,obj_evidence){
+		var evidence = instance_nearest(x,y,obj_evidence)
+		if evidence.can_be_grabbed{
+			evidence.grabbed = true
+		}
+	}
 }
