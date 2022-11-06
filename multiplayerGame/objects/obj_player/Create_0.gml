@@ -31,8 +31,9 @@ health_max = _health
 curr_slot = 0
 weapon_inventory = ["Sword"]//,"Crossbow","Mace"]
 curr_weapon = weapon_inventory[curr_slot]
-weapon_names = ["Sword","Crossbow","Mace"]
+//weapon_names = ["Sword","Crossbow","Mace"]
 show_switch_text = false
+_lives = 3
 
 shot_dist = 30
 

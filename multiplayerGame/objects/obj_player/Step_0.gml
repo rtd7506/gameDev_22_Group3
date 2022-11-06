@@ -53,7 +53,13 @@ if !hurt && can_be_hurt{
 		alarm[2] = 30
 		_health -= 2
 		if (_health < 1){
-			room_restart()
+			x = 384
+			y = 608
+			if place_meeting(x,y,obj_enemy_base){
+				instance_destroy(instance_nearest(x,y,obj_enemy_base))
+			}
+			_health = health_max
+			_lives -= 1
 		}
 	}
 }

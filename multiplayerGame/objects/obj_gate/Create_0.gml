@@ -3,3 +3,5 @@
 event_inherited()
 _health = 3
 health_max = _health
+
+value = 10

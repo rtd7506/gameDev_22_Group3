@@ -48,6 +48,7 @@
     {"id":{"name":"AddMoney","path":"scripts/AddMoney/AddMoney.yy",},"order":1,},
     {"id":{"name":"spr_no_move","path":"sprites/spr_no_move/spr_no_move.yy",},"order":3,},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"order":13,},
+    {"id":{"name":"Store_Font_small","path":"fonts/Store_Font_small/Store_Font_small.yy",},"order":1,},
     {"id":{"name":"MoveCollide","path":"scripts/MoveCollide/MoveCollide.yy",},"order":0,},
     {"id":{"name":"obj_no_move","path":"objects/obj_no_move/obj_no_move.yy",},"order":7,},
     {"id":{"name":"obj_collidable","path":"objects/obj_collidable/obj_collidable.yy",},"order":5,},

@@ -3,6 +3,8 @@
 
 event_inherited()
 
+cost = cost_base + (instance_number(enemy)*25)
+
 if MONEY >= cost{
 	can_be_grabbed = true
 }else{

@@ -5,4 +5,4 @@ event_inherited()
 _health = 1
 health_max = _health
 
-
+value = 2

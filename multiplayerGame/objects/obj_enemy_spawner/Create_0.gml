@@ -10,4 +10,6 @@ spawnDelay = 120
 spawn_count = 0
 spawn_limit = 5
 
+value = 15
+
 alarm[2] = spawnDelay
