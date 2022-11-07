@@ -39,6 +39,10 @@ shot_dist = 30
 
 slash_anim = 0
 
+move_boost = 0
+health_boost = 0
+damage_boost = 0
+
 depth = -100
 
 image_xscale = 2

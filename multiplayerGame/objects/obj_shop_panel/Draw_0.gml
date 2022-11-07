@@ -8,6 +8,8 @@ if place_meeting(x,y,obj_player){
 	
 	if _type == 1{
 		draw_text(x+100,y,"Buy "+item)
+	}else if _type == 2{
+		draw_text(x+100,y,boost)
 	}else{
 		draw_text(x+100,y,title_text_options[_type])
 	}
@@ -42,6 +44,14 @@ if place_meeting(x,y,obj_player){
 			instance_destroy()
 		}else if _type == 2{
 			PLAYER_MONEY -= cost
+			if boost == "+1 Damage"{
+				obj_player.damage_boost+=1
+			}else if boost == "+5 Max Health"{
+				obj_player.health_max+=5
+				obj_player._health+=5
+			}else if boost == "+1 Speed"{
+				obj_player.move_boost+=0.5
+			}
 			instance_destroy()
 		}else{
 			PLAYER_MONEY -= cost

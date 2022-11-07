@@ -26,9 +26,9 @@ if keyboard_check(ord("S")){
     }
 }
 if hitting{ //Slow down player when swinging
-	mspd = 1.5
+	mspd = 1.5+move_boost
 }else{
-	mspd = 2.5
+	mspd = 2.5+move_boost
 }
 if !hurt && can_be_hurt{
 	if collision_circle(x,y+4,24,obj_enemy_spawnee,false,false){ //Detect when hurt by enemy
