@@ -43,3 +43,17 @@ for (var i = 0; i<3;i++){  //Create food items for sc2
 instance_create_depth(864,288,0,obj_document)
 new_doc = false
 //instance_create_depth(960,545,301,obj_customer)
+doc_count = 0
+
+next_task = false
+
+order = []
+shuffle = [0,1,2,3,4]
+rep = array_length(shuffle)
+for (var i = 0; i<rep;i++){
+	var r = irandom_range(0,array_length(shuffle)-1)
+	array_push(order,shuffle[r])
+	array_delete(shuffle,r,1)
+}
+show_debug_message(string(order))
+task_progress = 0

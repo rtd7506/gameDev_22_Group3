@@ -23,6 +23,7 @@ if entering{
 
 if x > room_width && obj_menu.game_screen == sub_id && obj_menu.screen == 1{
 	obj_menu.new_doc = true
+	obj_menu.doc_count += 1
 	instance_destroy()
 }
 
