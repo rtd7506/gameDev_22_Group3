@@ -14,6 +14,7 @@ if obj_menu.screen == _id{
 	if collision_rectangle(x,y,x+200,y+200,obj_food_item,false,false){
 		var food = instance_nearest(x,y,obj_food_item)
 		if food.falling && food.food_id == want && !leaving{
+			audio_play_sound(snd_give, 1, 0)
 			leaving = true
 			active = false
 			AddMoney(x,y,100)

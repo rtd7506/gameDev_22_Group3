@@ -13,6 +13,7 @@ if grabbed {
 			grabbed = false
 			instance_create_layer(x,y,"Enemies",type) //Spawn actual enemy
 			MONEY -= cost
+			audio_play_sound(snd_buy, 1, 0)
 			instance_destroy()
 		}
 	}else{

@@ -52,6 +52,7 @@ if !hurt && can_be_hurt{
 		alarm[1] = 10
 		alarm[2] = 30
 		_health -= 2
+		audio_play_sound(snd_damage, 1, 0)
 		if (_health < 1){
 			x = 384
 			y = 608
