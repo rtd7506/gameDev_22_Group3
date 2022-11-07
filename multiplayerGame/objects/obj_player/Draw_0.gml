@@ -11,3 +11,4 @@ if show_switch_text{
 	draw_set_color(c_white)
 	draw_text(x-25,y-75,curr_weapon)
 }
+//draw_circle(x,y+4,24,false)

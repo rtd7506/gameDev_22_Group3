@@ -14,7 +14,7 @@ if cranking{
 			cranking = false
 			alarm[0] = 60
 		}
-		show_debug_message(progress)
+		//show_debug_message(progress)
 		
 	}
 

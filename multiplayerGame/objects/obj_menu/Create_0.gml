@@ -30,8 +30,11 @@ for (var i = 0; i<3;i++){  //Create food items for sc3
 		}
 	}
 }
-
+cust_count = -1
 no_customer = true
+
+
+option_count = 0
 option_next = false
 
 instance_create_depth(1024,416,0,obj_shredder)
@@ -45,7 +48,7 @@ new_doc = false
 //instance_create_depth(960,545,301,obj_customer)
 doc_count = 0
 
-next_task = false
+next_task = true
 
 order = []
 shuffle = [0,1,2,3,4]

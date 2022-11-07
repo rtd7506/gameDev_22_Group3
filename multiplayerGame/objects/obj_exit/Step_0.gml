@@ -3,7 +3,7 @@
 
 if place_meeting(x,y,obj_player){
 	obj_player.x = 384
-	obj_player.y = 608
+	obj_player.y = 576
 	if !obj_manager.shop{
 		obj_manager.stage += 1
 		for (var i=0; i < 3; i++){

@@ -7,7 +7,7 @@
     "path": "sprites/spr_slash/spr_slash.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,

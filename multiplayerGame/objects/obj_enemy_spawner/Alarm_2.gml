@@ -19,10 +19,11 @@ if array_length(possible_spawn_posX) > 0{
 possible_spawn_posX = []
 possible_spawn_posY = []
 spawn_count+= 1
-
+/*
 if spawn_count > spawn_limit-1{
 	instance_destroy()
 }
+*/
 alarm[2] = spawnDelay
 
 

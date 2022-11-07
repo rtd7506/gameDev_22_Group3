@@ -43,6 +43,7 @@ if mouse_check_button_pressed(mb_left){ //Do all mouse interactions
 		if food_item.can_be_grabbed{
 			food_item.grabbed = true
 		}
+		grab_task = true
 	}
 	if place_meeting(x,y,obj_choose_option){
 		var option = instance_nearest(x,y,obj_choose_option)
@@ -57,6 +58,7 @@ if mouse_check_button_pressed(mb_left){ //Do all mouse interactions
 		if evidence.can_be_grabbed{
 			evidence.grabbed = true
 		}
+		grab_task = true
 	}
 	if place_meeting(x,y,obj_crank){
 		var crank = instance_nearest(x,y,obj_crank)
@@ -71,4 +73,14 @@ if mouse_check_button(mb_left){
 	if place_meeting(x,y,obj_document)&& !collision_circle(x,y,0.5,obj_ink,false,false){ //  
 		instance_create_depth(x,y,-1000,obj_ink)
 	}
+}
+
+if mouse_check_button_released(mb_left){
+	grab_task = false
+}
+
+if grab_task && x < 736{
+	image_index = 1
+}else{
+	image_index = 0
 }

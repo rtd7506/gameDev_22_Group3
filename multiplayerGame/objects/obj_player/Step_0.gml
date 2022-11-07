@@ -31,7 +31,7 @@ if hitting{ //Slow down player when swinging
 	mspd = 2.5
 }
 if !hurt && can_be_hurt{
-	if collision_circle(x,y,16,obj_enemy_spawnee,false,false){ //Detect when hurt by enemy
+	if collision_circle(x,y+4,24,obj_enemy_spawnee,false,false){ //Detect when hurt by enemy
 		//show_debug_message("GOT HURT")
 		hurt = true;
 		can_be_hurt = false
@@ -40,10 +40,7 @@ if !hurt && can_be_hurt{
 		alarm[1] = 10
 		alarm[2] = 30
 		_health -= 1
-		if (_health < 1){
-			room_restart()
-		}
-	}else if collision_circle(x,y,16,obj_enemy,false,false){ //Detect when hurt by enemy
+	}else if collision_circle(x,y+4,24,obj_enemy,false,false){ //Detect when hurt by enemy
 		//show_debug_message("GOT HURT")
 		hurt = true;
 		can_be_hurt = false
@@ -52,15 +49,16 @@ if !hurt && can_be_hurt{
 		alarm[1] = 10
 		alarm[2] = 30
 		_health -= 2
-		if (_health < 1){
-			x = 384
-			y = 608
-			if place_meeting(x,y,obj_enemy_base){
-				instance_destroy(instance_nearest(x,y,obj_enemy_base))
-			}
-			_health = health_max
-			_lives -= 1
+		
+	}
+	if (_health < 1){
+		x = 384
+		y = 576
+		if place_meeting(x,y,obj_enemy_base){
+			instance_destroy(instance_nearest(x,y,obj_enemy_base))
 		}
+		_health = health_max
+		_lives -= 1
 	}
 }
 if hurt{
@@ -72,7 +70,11 @@ if hurt{
 }
 hspd = lengthdir_x(mspd,move_dir)    // find x&y speed by using angle and base speed
 vspd = lengthdir_y(mspd,move_dir)
-
+if move_dir > 270 || move_dir < 90{
+	image_xscale = 2
+}else{
+	image_xscale = -2
+}
 
 if keyboard_check(ord("W"))
 or keyboard_check(ord("A"))
@@ -80,19 +82,27 @@ or keyboard_check(ord("S"))
 or keyboard_check(ord("D"))
 or hurt{        // if pressing any move keys, move player!
     MoveCollide()
+	if !hitting{
+		sprite_index = spr_player_walk
+	}
+}else{
+	if !hitting{
+		sprite_index = spr_player_idle
+	}
 }
-
+if hitting{
+	sprite_index = spr_player_swing
+	image_index = slash_anim
+}
 
 if (keyboard_check_pressed(vk_space) && hitting == false && !place_meeting(x,y,obj_shop_panel)){
 	if curr_weapon == "Sword"{
 		hitting = true
-		hit_x = lengthdir_x(slash_dist,move_dir)   
-		hit_y = lengthdir_y(slash_dist,move_dir)
-		var slash = instance_create_depth(x+hit_x,y+hit_y,-1000,obj_slash) //Create slash hitbox
-		slash.hit_x = hit_x
-		slash.hit_y = hit_y
-		slash.image_angle = move_dir+90
-		alarm[0] = 30
+		image_index = 0
+		alarm[4] = 10
+		slash_anim = 0
+		alarm[5] = 10
+		
 	}else if curr_weapon == "Crossbow"{
 		hitting = true
 		var shot_dir = AimAssist()

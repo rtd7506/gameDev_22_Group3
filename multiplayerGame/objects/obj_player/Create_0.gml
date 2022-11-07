@@ -37,4 +37,9 @@ _lives = 3
 
 shot_dist = 30
 
+slash_anim = 0
+
 depth = -100
+
+image_xscale = 2
+image_yscale = 2

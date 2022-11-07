@@ -11,13 +11,25 @@ if screen == 0{
 }
 
 if no_customer == true{
-	no_customer = false
-	alarm[0] = irandom_range(60,180)
+	cust_count+= 1
+	if cust_count > 2{
+		next_task = true
+		cust_count = -1
+	}else{
+		no_customer = false
+		alarm[0] = irandom_range(60,180)
+	}
 }
 
 if option_next{
-	alarm[1] = 60
-	option_next = false
+	option_count+=1
+	if option_count > 3{
+		next_task = true
+		option_count = 0
+	}else{
+		alarm[1] = 60
+		option_next = false
+	}
 }
 
 if next_task || keyboard_check_pressed(ord("T")){
