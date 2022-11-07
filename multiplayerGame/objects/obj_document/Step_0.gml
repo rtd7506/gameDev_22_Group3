@@ -7,6 +7,7 @@ if place_meeting(x,y,obj_ink){
 	if mouse_check_button_released(mb_left){
 		leaving = true
 		active = false
+		AddMoney(x,y,20)
 	}
 }
 

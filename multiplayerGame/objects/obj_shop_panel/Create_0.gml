@@ -11,7 +11,7 @@ possible_weapons = ["Sword","Crossbow","Mace"]
 
 cost = 0
 if _type == 0{
-	cost = 10
+	cost = 50
 }else if _type == 1{
 	if array_length(obj_player.weapon_inventory) < array_length(possible_weapons){
 		item = possible_weapons[array_length(obj_player.weapon_inventory)]

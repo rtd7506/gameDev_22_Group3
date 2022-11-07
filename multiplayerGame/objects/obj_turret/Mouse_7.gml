@@ -4,7 +4,7 @@
 
 if can_fire { 
 	can_fire = false 
-	alarm[0] = fire_rate 
+	alarm[2] = fire_rate 
 	
 	var _dir = image_angle 
 	

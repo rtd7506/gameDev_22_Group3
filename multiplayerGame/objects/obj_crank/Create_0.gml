@@ -12,3 +12,4 @@ tick_angle = 45
 last_tick = 0
 progress = 0
 stop = false
+last_progress = 0

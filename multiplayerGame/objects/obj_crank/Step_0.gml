@@ -17,6 +17,12 @@ if cranking{
 		//show_debug_message(progress)
 		
 	}
+	
+	if progress % 30 == 0 && progress != last_progress{
+		last_progress = progress
+		AddMoney(x,y,20)
+		//show_debug_message("TICK")
+	}
 
 	
 	

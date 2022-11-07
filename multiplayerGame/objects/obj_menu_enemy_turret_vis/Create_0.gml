@@ -4,7 +4,7 @@
 event_inherited()
 cost_base = 200
 cost = cost_base
-//type = obj_menu_enemy_spawner
+type = obj_menu_enemy_turret
 enemy = obj_turret
 name = "TURRET"
 

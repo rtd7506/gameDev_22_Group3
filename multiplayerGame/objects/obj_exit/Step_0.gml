@@ -21,6 +21,7 @@ if place_meeting(x,y,obj_player){
 				instance_create_layer(208+i*352,272+j*224,"Enemies",obj_gate)
 			}
 		}
+		obj_manager.alarm[1] = 240
 		obj_manager.done = false
 		instance_destroy()
 	}

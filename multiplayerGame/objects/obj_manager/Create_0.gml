@@ -17,7 +17,7 @@ alarm[0] = 1
 
 globalvar MONEY;
 MONEY = 150;
-alarm[1] = 120
+alarm[1] = 240
 
 globalvar PLAYER_MONEY;
 PLAYER_MONEY = 0;
