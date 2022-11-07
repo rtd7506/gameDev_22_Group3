@@ -3,10 +3,11 @@
 
 event_inherited()
 _id = 1
-sub_id = 2
+sub_id = 3
 x_pos = x
 y_pos = y
-
-grabbed = false
-can_be_grabbed = true
-shredding = false
+scale = 0.1
+leaving = false
+entering = true
+active = false
+image_yscale = 0.05

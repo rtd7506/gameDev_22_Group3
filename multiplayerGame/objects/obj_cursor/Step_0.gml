@@ -58,4 +58,11 @@ if mouse_check_button_pressed(mb_left){ //Do all mouse interactions
 			evidence.grabbed = true
 		}
 	}
+	
+}
+
+if mouse_check_button(mb_left){
+	if place_meeting(x,y,obj_document)&& !collision_circle(x,y,0.5,obj_ink,false,false){ //  
+		instance_create_depth(x,y,-1000,obj_ink)
+	}
 }

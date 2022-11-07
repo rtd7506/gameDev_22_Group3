@@ -8,6 +8,7 @@ event_inherited()
 can_be_grabbed = false
 
 _id = 0
+sub_id = 0
 x_pos = 860
 
 image_xscale = 2

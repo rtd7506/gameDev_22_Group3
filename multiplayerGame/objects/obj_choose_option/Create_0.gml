@@ -1,7 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited()
-_id = 3
+_id = 1
+sub_id = 1
 x_pos = x
 image_xscale = 2
 image_yscale = 2

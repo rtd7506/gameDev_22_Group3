@@ -4,7 +4,8 @@ event_inherited()
 
 want = irandom_range(0,2)
 x_pos = x
-_id = 2
+_id = 1
+sub_id = 0
 end_y = 416
 active = false
 leaving = false

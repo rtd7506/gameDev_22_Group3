@@ -3,7 +3,8 @@
 
 event_inherited()
 
-_id = 2
+_id = 1
+sub_id = 0
 x_pos = x//896 + 50 + food_id
 //x_pos = 896
 
