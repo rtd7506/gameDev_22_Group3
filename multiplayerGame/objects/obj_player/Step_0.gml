@@ -34,6 +34,7 @@ if !hurt && can_be_hurt{
 	if collision_circle(x,y+4,24,obj_enemy_spawnee,false,false){ //Detect when hurt by enemy
 		//show_debug_message("GOT HURT")
 		hurt = true;
+		audio_play_sound(snd_damage, 1, 0)
 		can_be_hurt = false
 		var en = instance_nearest(x,y,obj_enemy_spawnee)
 		hurt_dir = point_direction(x,y,en.x,en.y)
@@ -43,6 +44,7 @@ if !hurt && can_be_hurt{
 	}else if collision_circle(x,y+4,24,obj_enemy,false,false){ //Detect when hurt by enemy
 		//show_debug_message("GOT HURT")
 		hurt = true;
+		audio_play_sound(snd_damage, 1, 0)
 		can_be_hurt = false
 		var en = instance_nearest(x,y,obj_enemy)
 		hurt_dir = point_direction(x,y,en.x,en.y)
@@ -51,7 +53,7 @@ if !hurt && can_be_hurt{
 		_health -= 2
 		
 	}
-	audio_play_sound(snd_damage, 1, 0)
+	
 	if (_health < 1){
 		x = 384
 		y = 576
