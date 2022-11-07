@@ -32,7 +32,7 @@ if place_meeting(x,y,obj_player){
 		}else if _type == 1{
 			PLAYER_MONEY -= cost
 			array_push(obj_player.weapon_inventory,item)
-			obj_player.curr_slot += 1
+			obj_player.curr_slot = array_length(obj_player.weapon_inventory)-1
 			if obj_player.curr_slot > array_length(obj_player.weapon_inventory)-1{
 				obj_player.curr_slot = 0
 			}

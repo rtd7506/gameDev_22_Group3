@@ -4,9 +4,9 @@
 _type = irandom_range(0,2)
 title_text_options = ["+3 Health","New Weapon","New Item","Stat Boost"]
 
-title_text = "+3 Health"
-sub_text = "Cost: $10"
-control_text = "Press SPACE to buy"
+//title_text = "+3 Health"
+//sub_text = "Cost: $10"
+//control_text = "Press SPACE to buy"
 possible_weapons = ["Sword","Crossbow","Mace"]
 
 cost = 0

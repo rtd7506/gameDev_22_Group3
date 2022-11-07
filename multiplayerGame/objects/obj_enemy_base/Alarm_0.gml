@@ -3,7 +3,7 @@
 
 hit = false
 if _health < 1{
-	PLAYER_MONEY += value
+	//PLAYER_MONEY += value
 	instance_destroy()
 }
 
