@@ -41,6 +41,8 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_77E1AF98","properties":[],"isDnd":false,"objectId":{"name":"obj_menu_enemy_turret_vis","path":"objects/obj_menu_enemy_turret_vis/obj_menu_enemy_turret_vis.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":896.0,"y":480.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_333F879E","properties":[],"isDnd":false,"objectId":{"name":"obj_crank_back","path":"objects/obj_crank_back/obj_crank_back.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":-1.7243092,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":960.0,"y":448.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_184FD46F","properties":[],"isDnd":false,"objectId":{"name":"obj_crank","path":"objects/obj_crank/obj_crank.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":960.0,"y":448.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7CAE0B21","properties":[],"isDnd":false,"objectId":{"name":"obj_enemy_brute","path":"objects/obj_enemy_brute/obj_enemy_brute.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":384.0,"y":288.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_65AD83FC","properties":[],"isDnd":false,"objectId":{"name":"obj_menu_enemy_brute_vis","path":"objects/obj_menu_enemy_brute_vis/obj_menu_enemy_brute_vis.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":896.0,"y":576.0,},
       ],"visible":true,"depth":300,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles_Shop","tilesetId":{"name":"ts_village","path":"tilesets/ts_village/ts_village.yy",},"x":0,"y":0,"tiles":{"TileDataFormat":1,"SerialiseWidth":19,"SerialiseHeight":11,"TileCompressedData":[
 -40,0,1,35,-5,21,1,37,-12,0,1,17,-5,1,1,25,-12,0,1,
@@ -79,6 +81,8 @@
     {"name":"inst_77E1AF98","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_333F879E","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_184FD46F","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_7CAE0B21","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_65AD83FC","path":"rooms/Room1/Room1.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
