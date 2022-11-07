@@ -10,6 +10,7 @@ if grabbed{
 		grabbed = false
 		if place_meeting(x,y,obj_shredder){
 			shredding = true
+			obj_shredder.count+= 1
 			MONEY += 25
 			depth = 0
 			y = 416

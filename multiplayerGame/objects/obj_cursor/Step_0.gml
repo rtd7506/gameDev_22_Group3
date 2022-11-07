@@ -58,6 +58,12 @@ if mouse_check_button_pressed(mb_left){ //Do all mouse interactions
 			evidence.grabbed = true
 		}
 	}
+	if place_meeting(x,y,obj_crank){
+		var crank = instance_nearest(x,y,obj_crank)
+		if !crank.stop {
+			crank.cranking = true
+		}
+	}
 	
 }
 
