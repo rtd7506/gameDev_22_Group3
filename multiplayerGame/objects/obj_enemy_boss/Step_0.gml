@@ -10,24 +10,29 @@ if hit{
 	if mspd < 0.25{
 		mspd+=0.25
 	}
-	move_dir = point_direction(x,y,obj_player.x,obj_player.y) //Move towards player
+	//move_dir = point_direction(x,y,obj_player.x,obj_player.y) //Move towards player
 }
 
 
 
-/*
-hspd = lengthdir_x(mspd,move_dir)
-vspd = lengthdir_y(mspd,move_dir)
+if moving{
+	hspd = lengthdir_x(mspd,move_dir)
+	vspd = lengthdir_y(mspd,move_dir)
+	//show_debug_message("AAAAA")
+	MoveCollide()
+}else{
+	hspd = 0
+	vspd = 0
+}
 
-MoveCollide()
-*/
 
-if mouse_x < 685 && mouse_x > 80{
+
+if can_attack{
 if can_fire { 
 	can_fire = false 
 	alarm[2] = fire_rate 
 	
-	var _dir = point_direction(x,y,mouse_x,mouse_y)
+	var _dir = attack_angle
 	var _spd = proj_speed
 	
 	var _inst = instance_create_layer(x,y,"Instances",obj_projectile_brute)

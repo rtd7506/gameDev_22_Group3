@@ -29,7 +29,9 @@ if mouse_check_button_pressed(mb_left){ //Do all mouse interactions
 		if !instance_position(x,y,obj_tab){
 			tab = instance_nearest(x,y,obj_tab)
 		}
-		obj_menu.screen = tab._id
+		if tab.active{
+			obj_menu.screen = tab._id
+		}
 		//show_debug_message(string(obj_menu.screen))
 	}
 	
@@ -81,7 +83,10 @@ if mouse_check_button_pressed(mb_left){ //Do all mouse interactions
 			obj_manager.boss_boost_speed += 1
 		}
 	}
-	
+	if place_meeting(x,y,obj_joystick){
+		var stick = instance_nearest(x,y,obj_joystick)
+		stick.wrangled = true
+	}
 }
 
 if mouse_check_button(mb_left){

@@ -41,7 +41,7 @@ if next_task{
 			array_push(order,shuffle[r])
 			array_delete(shuffle,r,1)
 		}
-		show_debug_message(string(order))
+		//show_debug_message(string(order))
 		task_progress = 0
 	}
 	game_screen = order[task_progress]
@@ -59,4 +59,7 @@ if game_screen == 3 && screen == 1 && doc_count > 4{
 
 if screen == 2{
 	image_index = 1
+}
+if screen == 3{
+	image_index = 7
 }

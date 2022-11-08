@@ -58,10 +58,22 @@ for (var i = 0; i<rep;i++){
 	array_push(order,shuffle[r])
 	array_delete(shuffle,r,1)
 }
-show_debug_message(string(order))
+//show_debug_message(string(order))
 task_progress = 0
 
 for (var i = 0; i<3;i++){
 	var boss_shop = instance_create_depth(832,288+96*i,0,obj_boss_shop)
 	boss_shop._type = i
+}
+
+for (var i = 0; i<2;i++){
+	var stick_b = instance_create_depth(880+i*160,480,0,obj_joystick_base)
+	with stick_b{
+		stick_b.stick_id = i
+	}
+	var stick = instance_create_layer(880+i*160,480,0,obj_joystick)
+	with stick{
+		stick.stick_id = i
+	}
+	//instance_create_layer(x_pos,y,"Instances",obj_joystick)
 }

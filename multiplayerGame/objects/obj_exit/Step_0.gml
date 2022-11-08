@@ -6,6 +6,9 @@ if place_meeting(x,y,obj_player){
 	obj_player.y = 576
 	if !obj_manager.shop{
 		obj_manager.stage += 1
+		if obj_manager.stage == 8{
+			room_goto(rm_end)
+		}
 		for (var i=0; i < 3; i++){
 			//var shop_panel = 
 			instance_create_layer(192,240+i*128,"Instances",obj_shop_panel)

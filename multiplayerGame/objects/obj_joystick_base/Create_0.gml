@@ -2,4 +2,8 @@
 // You can write your code in this editor
 
 event_inherited()
-active = true
+_id = 3
+sub_id = 0
+x_pos = x
+
+
