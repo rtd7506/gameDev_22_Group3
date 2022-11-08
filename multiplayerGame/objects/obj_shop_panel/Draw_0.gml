@@ -24,12 +24,13 @@ if place_meeting(x,y,obj_player){
 	
 	
 	if keyboard_check_pressed(vk_space) && PLAYER_MONEY >= cost{
-		audio_play_sound(snd_buy,10,false,1,0,1) 
+		
 		if _type == 0{
 			if obj_player._health < obj_player.health_max{
 				obj_player._health += 3
 				obj_player._health = clamp(obj_player._health,0,obj_player.health_max)
 				PLAYER_MONEY -= cost
+				audio_play_sound(snd_buy,10,false,1,0,1) 
 				instance_destroy()
 			}
 		}else if _type == 1{
@@ -42,6 +43,7 @@ if place_meeting(x,y,obj_player){
 			obj_player.show_switch_text = true
 			obj_player.curr_weapon = obj_player.weapon_inventory[obj_player.curr_slot]
 			obj_player.alarm[3] = 60
+			audio_play_sound(snd_buy,10,false,1,0,1) 
 			instance_destroy()
 		}else if _type == 2{
 			PLAYER_MONEY -= cost
@@ -53,9 +55,11 @@ if place_meeting(x,y,obj_player){
 			}else if boost == "+1 Speed"{
 				obj_player.move_boost+=0.5
 			}
+			audio_play_sound(snd_buy,10,false,1,0,1) 
 			instance_destroy()
 		}else{
 			PLAYER_MONEY -= cost
+			audio_play_sound(snd_buy,10,false,1,0,1) 
 			instance_destroy()
 		}
 		

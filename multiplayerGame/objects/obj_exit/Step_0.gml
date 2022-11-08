@@ -27,7 +27,7 @@ if place_meeting(x,y,obj_player){
 				
 			}
 		}
-		if obj_manager.stage == 7{
+		if obj_manager.stage >= 7{
 			instance_create_layer(384,288,"Enemies",obj_enemy_boss)
 			obj_manager.boss = true
 		}

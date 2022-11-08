@@ -17,9 +17,11 @@ if stage == 7 && !shop{
 	obj_menu.screen = 3
 }
 
-if keyboard_check_pressed(ord("T")){
+if keyboard_check_pressed(ord("P")) && stage < 6{
 	stage += 1
 }
+/*
 if keyboard_check_pressed(ord("B")){
 	obj_menu.screen = 3
 }
+*/
