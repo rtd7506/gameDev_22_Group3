@@ -1,8 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-_type = irandom_range(0,2)
-title_text_options = ["+3 Health","New Weapon","Stat Boost","New Item"]
+_type = irandom_range(0,3)
+title_text_options = ["+3 Health","New Weapon","Stat Boost","+1 Life"] //"New Item"
 
 //title_text = "+3 Health"
 //sub_text = "Cost: $10"
@@ -24,6 +24,6 @@ if _type == 0{
 }else if _type == 2{
 	cost = 100
 	boost = possible_boosts[irandom_range(0,array_length(possible_boosts)-1)]
-}else{
-	cost = 10
+}else if _type == 3{
+	cost = 150
 }
