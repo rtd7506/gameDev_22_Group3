@@ -24,6 +24,7 @@ if place_meeting(x,y,obj_player){
 	
 	
 	if keyboard_check_pressed(vk_space) && PLAYER_MONEY >= cost{
+		audio_play_sound(snd_buy,10,false,1,0,1) 
 		if _type == 0{
 			if obj_player._health < obj_player.health_max{
 				obj_player._health += 3

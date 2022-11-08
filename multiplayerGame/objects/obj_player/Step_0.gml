@@ -68,6 +68,7 @@ if !hurt && can_be_hurt{
 	}
 }
 if hurt{
+	audio_play_sound(Hit_damage_1,10,false) 
 	mspd = -2.5
 	move_dir = lerp(move_dir,hurt_dir,0.5)
 	image_blend = c_red
@@ -108,6 +109,8 @@ if (keyboard_check_pressed(vk_space) && hitting == false && !place_meeting(x,y,o
 		alarm[4] = 10
 		slash_anim = 0
 		alarm[5] = 10
+		audio_play_sound(snd_sword,10,false,1,0,random_range(1,2)) 
+		
 		
 	}else if curr_weapon == "Crossbow"{
 		hitting = true
