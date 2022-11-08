@@ -73,6 +73,7 @@
     {"id":{"name":"obj_enemy_brute","path":"objects/obj_enemy_brute/obj_enemy_brute.yy",},"order":5,},
     {"id":{"name":"obj_projectile_player","path":"objects/obj_projectile_player/obj_projectile_player.yy",},"order":22,},
     {"id":{"name":"obj_shredder","path":"objects/obj_shredder/obj_shredder.yy",},"order":11,},
+    {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},"order":40,},
     {"id":{"name":"spr_projectile","path":"sprites/spr_projectile/spr_projectile.yy",},"order":29,},
     {"id":{"name":"obj_menu_enemy_spawner_vis","path":"objects/obj_menu_enemy_spawner_vis/obj_menu_enemy_spawner_vis.yy",},"order":8,},
     {"id":{"name":"obj_progress","path":"objects/obj_progress/obj_progress.yy",},"order":22,},
