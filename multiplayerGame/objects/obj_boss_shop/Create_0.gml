@@ -13,3 +13,4 @@ cost = cost_base
 type = obj_menu_enemy
 enemy = obj_enemy
 name = "ENEMY"
+uses = 0

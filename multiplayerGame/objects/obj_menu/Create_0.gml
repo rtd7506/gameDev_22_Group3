@@ -22,7 +22,7 @@ var rx = irandom_range(0,2)
 var ry = irandom_range(0,2)
 for (var i = 0; i<3;i++){  //Create food items for sc3
 	for (var j = 0; j<3;j++){ 
-		var option = instance_create_depth(857+96*i,348+96*j,0,obj_choose_option)
+		var option = instance_create_depth(857+96*i,316+96*j,0,obj_choose_option)
 		if i == rx && j == ry{
 			option.choice = true
 		}else{
@@ -37,7 +37,7 @@ no_customer = true
 option_count = 0
 option_next = false
 
-instance_create_depth(1024,416,0,obj_shredder)
+instance_create_depth(1024,384,0,obj_shredder)
 for (var i = 0; i<3;i++){  //Create food items for sc2
 	//var evidence = 
 	instance_create_depth(880-8*i,304+8*i,0,obj_evidence)
@@ -77,3 +77,5 @@ for (var i = 0; i<2;i++){
 	}
 	//instance_create_layer(x_pos,y,"Instances",obj_joystick)
 }
+
+task_blurbs = ["Drag the proper food to the customer","Click the odd one out","Drag the evidence into the shredder","Drag the cursor to sign important documents","Turn the crank counterclockwise"]

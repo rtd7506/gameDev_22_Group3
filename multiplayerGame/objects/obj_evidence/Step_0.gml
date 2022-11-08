@@ -13,7 +13,7 @@ if grabbed{
 			obj_shredder.count+= 1
 			MONEY += 25
 			depth = 0
-			y = 416
+			y = 384
 			can_be_grabbed = false
 		}else{
 			x_offset = 0
@@ -28,7 +28,7 @@ if grabbed{
 if shredding{
 	x_offset = 1024-x_pos
 	y += 1
-	if y > 500{
+	if y > 468{
 		instance_destroy()
 	}
 }

@@ -74,13 +74,16 @@ if mouse_check_button_pressed(mb_left){ //Do all mouse interactions
 	}
 	if place_meeting(x,y,obj_boss_shop){
 		var boss_shop = instance_nearest(x,y,obj_boss_shop)
-		MONEY -= boss_shop.cost
-		if boss_shop._type == 0{
-			obj_manager.boss_boost_damage += 1
-		}else if boss_shop._type == 1{
-			obj_manager.boss_boost_health += 5
-		}else if boss_shop._type == 3{
-			obj_manager.boss_boost_speed += 1
+		if MONEY >= boss_shop.cost{
+			MONEY -= boss_shop.cost
+			if boss_shop._type == 0{
+				obj_manager.boss_boost_damage += 1
+			}else if boss_shop._type == 1{
+				obj_manager.boss_boost_health += 5
+			}else if boss_shop._type == 3{
+				obj_manager.boss_boost_speed += 1
+			}
+			boss_shop.uses+=1
 		}
 	}
 	if place_meeting(x,y,obj_joystick){
