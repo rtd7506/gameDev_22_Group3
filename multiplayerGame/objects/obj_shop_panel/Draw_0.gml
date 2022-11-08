@@ -57,9 +57,10 @@ if place_meeting(x,y,obj_player){
 			}
 			audio_play_sound(snd_buy,10,false,1,0,1) 
 			instance_destroy()
-		}else{
+		}else if _type == 3{
 			PLAYER_MONEY -= cost
 			audio_play_sound(snd_buy,10,false,1,0,1) 
+			obj_player._lives+=1
 			instance_destroy()
 		}
 		
