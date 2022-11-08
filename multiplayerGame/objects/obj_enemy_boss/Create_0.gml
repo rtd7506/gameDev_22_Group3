@@ -4,8 +4,8 @@
 event_inherited()
 
 value = 10
-mspd = 0.25
-_health = 25
+mspd = 0.25+obj_manager.boss_boost_speed
+_health = 25+obj_manager.boss_boost_health
 health_max = _health
 
 fire_rate = 30

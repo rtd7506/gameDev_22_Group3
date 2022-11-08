@@ -68,7 +68,7 @@ if !hurt && can_be_hurt{
 	}
 }
 if hurt{
-	audio_play_sound(Hit_damage_1,10,false) 
+	//audio_play_sound(snd_damage,10,false) 
 	mspd = -2.5
 	move_dir = lerp(move_dir,hurt_dir,0.5)
 	image_blend = c_red

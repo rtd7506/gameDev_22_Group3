@@ -35,6 +35,7 @@ if can_fire {
 		speed = _spd
 		direction = _dir
 		image_angle = _dir
+		_inst.damage = obj_manager.boss_boost_damage
 	} 
 }
 }

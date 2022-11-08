@@ -8,7 +8,7 @@ _id = 2
 sub_id = 0
 x_pos = 860
 
-cost_base = 100
+cost_base = 250
 cost = cost_base
 type = obj_menu_enemy
 enemy = obj_enemy

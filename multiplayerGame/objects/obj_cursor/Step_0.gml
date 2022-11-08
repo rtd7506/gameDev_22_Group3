@@ -74,11 +74,11 @@ if mouse_check_button_pressed(mb_left){ //Do all mouse interactions
 		var boss_shop = instance_nearest(x,y,obj_boss_shop)
 		MONEY -= boss_shop.cost
 		if boss_shop._type == 0{
-			obj_manager.boss_boost_damage += 2
+			obj_manager.boss_boost_damage += 1
 		}else if boss_shop._type == 1{
 			obj_manager.boss_boost_health += 5
 		}else if boss_shop._type == 3{
-			obj_manager.boss_boost_speed += 2
+			obj_manager.boss_boost_speed += 1
 		}
 	}
 	

@@ -30,5 +30,6 @@ if can_fire {
 		speed = _spd
 		direction = _dir
 		image_angle = _dir
+		damage = 0
 	} 
 }
