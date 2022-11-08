@@ -6,7 +6,7 @@ if place_meeting(x,y,obj_player){
 	obj_player.y = 576
 	if !obj_manager.shop{
 		obj_manager.stage += 1
-		if obj_manager.stage == 8{
+		if obj_manager.stage == 6{
 			room_goto(rm_end)
 		}
 		for (var i=0; i < 3; i++){
@@ -27,7 +27,7 @@ if place_meeting(x,y,obj_player){
 				
 			}
 		}
-		if obj_manager.stage >= 7{
+		if obj_manager.stage >= 5{
 			instance_create_layer(384,288,"Enemies",obj_enemy_boss)
 			obj_manager.boss = true
 		}

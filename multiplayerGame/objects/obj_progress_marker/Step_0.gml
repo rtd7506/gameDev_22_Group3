@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited()
-x_offset = (288/8) * obj_manager.stage
+x_offset = (288/6) * obj_manager.stage
 
 
