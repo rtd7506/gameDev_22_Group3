@@ -60,3 +60,8 @@ for (var i = 0; i<rep;i++){
 }
 show_debug_message(string(order))
 task_progress = 0
+
+for (var i = 0; i<3;i++){
+	var boss_shop = instance_create_depth(832,288+96*i,0,obj_boss_shop)
+	boss_shop._type = i
+}

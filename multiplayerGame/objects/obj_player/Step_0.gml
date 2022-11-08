@@ -62,6 +62,9 @@ if !hurt && can_be_hurt{
 		}
 		_health = health_max
 		_lives -= 1
+		if _lives < 1{
+			room_goto(rm_end)
+		}
 	}
 }
 if hurt{

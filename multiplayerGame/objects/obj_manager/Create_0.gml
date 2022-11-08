@@ -45,3 +45,6 @@ layer_set_visible(layer_get_id("Tiles_Dungeon"),!shop)
 	}
 	
 boss = false
+boss_boost_health = 0
+boss_boost_damage = 0
+boss_boost_speed = 0

@@ -1,9 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
-
-
 if screen == 0{
 	image_index = screen
 }else if screen == 1{
