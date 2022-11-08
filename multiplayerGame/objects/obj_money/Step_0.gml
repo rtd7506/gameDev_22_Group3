@@ -15,6 +15,6 @@ if obj_manager.shop{
 }
 
 if place_meeting(x,y,obj_player){
-	PLAYER_MONEY += 10
+	PLAYER_MONEY += 10+floor(obj_manager.stage/3)*5
 	instance_destroy()
 }

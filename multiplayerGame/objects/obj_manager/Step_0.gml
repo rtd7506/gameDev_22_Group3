@@ -7,3 +7,6 @@ if instance_number(obj_gate) < 1 && !done{
 	instance_create_layer(384,128,"Enemies",obj_exit)
 }
 
+if keyboard_check_pressed(ord("T")){
+	stage += 1
+}

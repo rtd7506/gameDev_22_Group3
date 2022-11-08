@@ -43,3 +43,5 @@ layer_set_visible(layer_get_id("Tiles_Dungeon"),!shop)
 		instance_activate_layer(layer_get_id("tile_collisions_shop"))
 		instance_deactivate_layer(layer_get_id("tile_collisions"))
 	}
+	
+boss = false

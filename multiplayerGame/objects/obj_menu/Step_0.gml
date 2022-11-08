@@ -32,7 +32,7 @@ if option_next{
 	}
 }
 
-if next_task || keyboard_check_pressed(ord("T")){
+if next_task{
 	next_task = false
 	task_progress += 1
 	if task_progress > array_length(order)-1{
@@ -58,4 +58,8 @@ if new_doc{
 if game_screen == 3 && screen == 1 && doc_count > 4{
 	next_task = true
 	doc_count = 0
+}
+
+if screen == 2{
+	image_index = 1
 }

@@ -73,7 +73,7 @@ if hurt{
 }
 hspd = lengthdir_x(mspd,move_dir)    // find x&y speed by using angle and base speed
 vspd = lengthdir_y(mspd,move_dir)
-if move_dir > 270 || move_dir < 90{
+if move_dir > 270 || move_dir <= 90{
 	image_xscale = 2
 }else{
 	image_xscale = -2

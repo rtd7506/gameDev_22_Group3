@@ -31,3 +31,4 @@ if side == 0{
 }
 
 move_dir = point_direction(x,y,obj_player.x,obj_player.y) //Move towards player
+

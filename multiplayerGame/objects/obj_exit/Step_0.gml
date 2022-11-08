@@ -7,7 +7,8 @@ if place_meeting(x,y,obj_player){
 	if !obj_manager.shop{
 		obj_manager.stage += 1
 		for (var i=0; i < 3; i++){
-			var shop_panel = instance_create_layer(192,240+i*128,"Instances",obj_shop_panel)
+			//var shop_panel = 
+			instance_create_layer(192,240+i*128,"Instances",obj_shop_panel)
 		}
 		instance_destroy(obj_enemy_base)
 		obj_manager.shop = true
@@ -18,8 +19,14 @@ if place_meeting(x,y,obj_player){
 		instance_destroy(obj_shop_panel)
 		for (var i=0; i < 2; i++){
 			for (var j=0; j < 2; j++){
+				//var gate = 
 				instance_create_layer(208+i*352,272+j*224,"Enemies",obj_gate)
+				
 			}
+		}
+		if obj_manager.stage == 7{
+			instance_create_layer(384,288,"Enemies",obj_enemy_boss)
+			obj_manager.boss = true
 		}
 		obj_manager.alarm[1] = 240
 		obj_manager.done = false
