@@ -3,7 +3,7 @@
 
 randomize()
 
-mspd = 2.5
+mspd = 3
 
 move_dir = 0
 

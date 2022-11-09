@@ -16,8 +16,8 @@ if hit{
 
 
 if moving{
-	hspd = lengthdir_x(mspd,move_dir)
-	vspd = lengthdir_y(mspd,move_dir)
+	//hspd = lengthdir_x(mspd,move_dir)
+	//vspd = lengthdir_y(mspd,move_dir)
 	//show_debug_message("AAAAA")
 	MoveCollide()
 }else{

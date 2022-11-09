@@ -14,8 +14,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_paper",
-  "duration": 0.0,
+  "soundFile": "snd_paper.wav",
+  "duration": 0.722516,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

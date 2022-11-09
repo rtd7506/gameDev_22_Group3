@@ -14,3 +14,5 @@ proj_speed = 6
 can_attack = false
 attack_angle = 0
 moving = false
+
+alarm[3] = 60

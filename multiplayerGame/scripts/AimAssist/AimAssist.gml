@@ -7,7 +7,12 @@ function AimAssist(){
 	var best_angle = "undefined"
 	for (var i = 0; i < instance_number(obj_enemy_base); ++i;)
 	{
-	    options[i] = instance_find(obj_enemy_base,i);
+		var test = instance_find(obj_enemy_base,i);
+		if !(object_get_name(test.object_index) == "obj_gate" && obj_manager.boss){
+			//options[i] = test
+			array_push(options,test)
+		}
+		//show_debug_message(object_get_name(test.object_index))
 	}
 	for (var i = 0; i < array_length(options); ++i;)
 	{
@@ -25,9 +30,11 @@ function AimAssist(){
 	if best_angle == "undefined"{
 		best_angle = move_dir
 	}
+	/*
 	show_debug_message(string(results))
 	show_debug_message(string(move_dir))
 	show_debug_message(string(best_angle))
+	*/
 	return best_angle
 	
 }
