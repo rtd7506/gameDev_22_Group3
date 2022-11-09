@@ -15,14 +15,15 @@ if wrangled {
 
 if can_fire { 
 	can_fire = false 
-	alarm[2] = fire_rate 
+	alarm[2] = fire_cooldown
 	
 	var _dir = image_angle 
-	
 	var _inst = instance_create_layer(x,y,"Instances",obj_projectile)
 	with _inst { 
 		speed = obj_turret.proj_speed 
 		direction = _dir
 		image_angle = _dir
 	} 
+	fire_count+=1
+	alarm[3] = fire_rate
 }
