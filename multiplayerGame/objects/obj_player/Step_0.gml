@@ -94,11 +94,35 @@ if hurt{
 }
 hspd = lengthdir_x(mspd,move_dir)    // find x&y speed by using angle and base speed
 vspd = lengthdir_y(mspd,move_dir)
+/*
 if attack_dir > 270 || attack_dir <= 90{
 	image_xscale = 2
 }else{
 	image_xscale = -2
 }
+*/
+if attack_dir < 135 && attack_dir > 45{
+	idle_anim = spr_player_u_idle
+	move_anim = spr_player_u_move
+	attack_anim = spr_player_u_attack
+	attack_dir = 0
+}else if attack_dir < 45 || attack_dir > 315{
+	idle_anim = spr_player_r_idle
+	move_anim = spr_player_r_move
+	attack_anim = spr_player_r_attack
+	attack_dir = 1
+}else if attack_dir < 315 && attack_dir > 225{
+	idle_anim = spr_player_d_idle
+	move_anim = spr_player_d_move
+	attack_anim = spr_player_d_attack
+	attack_dir = 2
+}else if attack_dir < 225 && attack_dir > 135{
+	idle_anim = spr_player_l_idle
+	move_anim = spr_player_l_move
+	attack_anim = spr_player_l_attack
+	attack_dir = 3
+}
+
 
 if keyboard_check(ord("W"))
 or keyboard_check(ord("A"))
@@ -107,11 +131,11 @@ or keyboard_check(ord("D"))
 or hurt{        // if pressing any move keys, move player!
     MoveCollide()
 	if !hitting{
-		sprite_index = spr_player_walk
+		sprite_index = move_anim
 	}
 }else{
 	if !hitting{
-		sprite_index = spr_player_idle
+		sprite_index = idle_anim
 		audio_stop_sound(snd_footsteps)
 	}
 	
@@ -163,7 +187,7 @@ or keyboard_check(vk_left){
 }
 
 if hitting{
-	sprite_index = spr_player_swing
+	sprite_index = attack_anim
 	image_index = slash_anim
 }
 
@@ -171,7 +195,7 @@ if (keyboard_check_pressed(vk_space) && hitting == false && !place_meeting(x,y,o
 	if curr_weapon == "Sword"{
 		hitting = true
 		image_index = 0
-		alarm[4] = 10
+		alarm[4] = 16
 		slash_anim = 0
 		alarm[5] = 10
 		audio_play_sound(snd_sword,10,false,1,0,random_range(1,2)) 

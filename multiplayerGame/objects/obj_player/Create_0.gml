@@ -50,6 +50,10 @@ image_yscale = 2
 
 attack_dir = 0
 
+idle_anim = spr_player_d_idle
+move_anim = spr_player_d_move
+attack_anim = spr_player_d_attack
+
 //Tutorial Checks
 tutorial_text = ["Use WASD to Move"]
 hasMoved = false
