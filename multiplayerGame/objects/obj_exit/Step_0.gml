@@ -30,7 +30,7 @@ if place_meeting(x,y,obj_player){
 		if obj_manager.stage >= 5{
 			instance_create_layer(384,288,"Enemies",obj_enemy_boss)
 			obj_manager.boss = true
-			obj_manager.alarm[2] = 60
+			//obj_manager.alarm[2] = 60
 			obj_menu.screen = 0
 		}else{
 			obj_manager.alarm[1] = 240

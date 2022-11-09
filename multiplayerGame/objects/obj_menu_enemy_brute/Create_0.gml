@@ -3,5 +3,9 @@
 event_inherited()
 
 cost = 200
+cost_base = cost
 type = obj_enemy_brute
 offset = 16
+
+image_xscale = 1
+image_yscale = 1

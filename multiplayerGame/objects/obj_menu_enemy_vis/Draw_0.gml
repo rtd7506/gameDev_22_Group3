@@ -5,13 +5,14 @@ draw_set_color(c_black)
 draw_set_font(Store_Font)
 draw_text(x+50,y-30,"Buy "+string(name))
 
+if obj_manager.boss{
+	cost = floor(cost_base/2)
+}
+
 if MONEY < cost{
 	draw_set_color(c_red)
 }else{
 	draw_set_color(c_black)
 }
-if obj_manager.boss{
-	draw_text(x+50,y,"Cost: "+string(round(cost)/2))
-}else{
-	draw_text(x+50,y,"Cost: "+string(cost))
-}
+
+draw_text(x+50,y,"Cost: "+string(cost))

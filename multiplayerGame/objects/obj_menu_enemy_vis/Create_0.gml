@@ -13,6 +13,7 @@ x_pos = 860
 
 image_xscale = 2
 image_yscale = 2
+image_speed = 0
 
 cost_base = 50
 cost = cost_base

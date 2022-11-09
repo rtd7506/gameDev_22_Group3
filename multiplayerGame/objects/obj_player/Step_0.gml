@@ -46,7 +46,8 @@ if !hurt && can_be_hurt{
 		}else{
 			_health -= 1
 		}
-	}else if collision_circle(x,y+4,24,obj_enemy,false,false){ //Detect when hurt by enemy
+	/*}else if collision_circle(x,y+4,24,obj_enemy,false,false){ //Detect when hurt by enemy
+		
 		//show_debug_message("GOT HURT")
 		hurt = true;
 		audio_play_sound(snd_damage, 1, 0)
@@ -60,6 +61,7 @@ if !hurt && can_be_hurt{
 		}else{
 			_health -= 2
 		}
+		*/
 	}else if place_meeting(x,y,obj_boss_slash){
 		hurt = true;
 		audio_play_sound(snd_damage, 1, 0)
@@ -69,6 +71,19 @@ if !hurt && can_be_hurt{
 		alarm[1] = 10
 		alarm[2] = 30
 		_health -= 2+obj_manager.boss_boost_damage
+	}else if place_meeting(x,y,obj_enemy_slash){
+		hurt = true;
+		audio_play_sound(snd_damage, 1, 0)
+		can_be_hurt = false
+		var en = instance_nearest(x,y,obj_enemy)
+		hurt_dir = point_direction(x,y,en.x,en.y)
+		alarm[1] = 10
+		alarm[2] = 30
+		if obj_manager.boss = true{
+			_health -= 1
+		}else{
+			_health -= 2
+		}
 	}
 	
 	if (_health < 1){
@@ -84,6 +99,7 @@ if !hurt && can_be_hurt{
 		}
 	}
 }
+
 if hurt{
 	//audio_play_sound(snd_damage,10,false) 
 	mspd = -2.5
@@ -105,22 +121,22 @@ if attack_dir < 135 && attack_dir > 45{
 	idle_anim = spr_player_u_idle
 	move_anim = spr_player_u_move
 	attack_anim = spr_player_u_attack
-	attack_dir = 0
+	attacking_dir = 0
 }else if attack_dir < 45 || attack_dir > 315{
 	idle_anim = spr_player_r_idle
 	move_anim = spr_player_r_move
 	attack_anim = spr_player_r_attack
-	attack_dir = 1
+	attacking_dir = 1
 }else if attack_dir < 315 && attack_dir > 225{
 	idle_anim = spr_player_d_idle
 	move_anim = spr_player_d_move
 	attack_anim = spr_player_d_attack
-	attack_dir = 2
+	attacking_dir = 2
 }else if attack_dir < 225 && attack_dir > 135{
 	idle_anim = spr_player_l_idle
 	move_anim = spr_player_l_move
 	attack_anim = spr_player_l_attack
-	attack_dir = 3
+	attacking_dir = 3
 }
 
 

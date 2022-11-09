@@ -49,12 +49,13 @@ image_xscale = 2
 image_yscale = 2
 
 attack_dir = 0
+attacking_dir = 0
 
 idle_anim = spr_player_d_idle
 move_anim = spr_player_d_move
 attack_anim = spr_player_d_attack
 
 //Tutorial Checks
-tutorial_text = ["Use WASD to Move"]
+tutorial_text = ["Use WASD to Move","Press SPACE to attack","Use the Arrow Keys to Aim","Destroy all the _____ to escape","Press Q to switch weapons"]
 hasMoved = false
 hasAttacked = false

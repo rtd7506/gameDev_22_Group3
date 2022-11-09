@@ -12,6 +12,9 @@ if grabbed {
 		if mouse_check_button_released(mb_left){
 			grabbed = false
 			instance_create_layer(x,y,"Enemies",type) //Spawn actual enemy
+			if obj_manager.boss{
+				cost = floor(cost_base/2)
+			}
 			MONEY -= cost
 			audio_play_sound(snd_buy, 1, 0)
 			instance_destroy()
