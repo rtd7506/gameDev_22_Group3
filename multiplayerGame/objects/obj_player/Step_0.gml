@@ -40,7 +40,11 @@ if !hurt && can_be_hurt{
 		hurt_dir = point_direction(x,y,en.x,en.y)
 		alarm[1] = 10
 		alarm[2] = 30
-		_health -= 1
+		if obj_manager.boss = true{
+			_health -= 0.5
+		}else{
+			_health -= 1
+		}
 	}else if collision_circle(x,y+4,24,obj_enemy,false,false){ //Detect when hurt by enemy
 		//show_debug_message("GOT HURT")
 		hurt = true;
@@ -50,7 +54,11 @@ if !hurt && can_be_hurt{
 		hurt_dir = point_direction(x,y,en.x,en.y)
 		alarm[1] = 10
 		alarm[2] = 30
-		_health -= 2
+		if obj_manager.boss = true{
+			_health -= 1
+		}else{
+			_health -= 2
+		}
 		
 	}
 	
