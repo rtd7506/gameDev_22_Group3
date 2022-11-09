@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "snd_paper",
+  "name": "snd_paper_pickup",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -14,8 +14,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_paper.wav",
-  "duration": 0.722516,
+  "soundFile": "snd_paper_pickup.wav",
+  "duration": 0.5,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

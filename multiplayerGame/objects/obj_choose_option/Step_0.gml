@@ -4,8 +4,10 @@ event_inherited()
 
 if choice{
 	sprite_index = spr_enemy_false
+	//audio_play_sound(snd_recruit_wrong, 1, 0)
 }else{
 	sprite_index = spr_enemy
+	//audio_play_sound(snd_recruit_correct, 1, 0)
 }
 
 if obj_menu.option_next{

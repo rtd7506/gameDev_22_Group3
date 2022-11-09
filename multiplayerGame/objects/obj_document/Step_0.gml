@@ -5,6 +5,7 @@ event_inherited()
 
 if place_meeting(x,y,obj_ink){
 	if mouse_check_button_released(mb_left){
+		audio_play_sound(snd_paper_sign, 1, 0)
 		leaving = true
 		active = false
 		AddMoney(x,y,20)

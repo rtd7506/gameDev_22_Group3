@@ -2,6 +2,7 @@
 // You can write your code in this editor
 event_inherited()
 if cranking{
+	//audio_play_sound(snd_crank, 1, 0)
 	var target_angle = point_direction(x,y,mouse_x,mouse_y)
 	if last_tick >= 360{
 		last_tick -= 360

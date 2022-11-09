@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+
 draw_self()
 draw_set_color(c_black)
 draw_set_font(pixel_font)
@@ -10,7 +11,19 @@ if MONEY < cost{
 }else{
 	draw_set_color(c_black)
 }
-draw_text(x+50,y,"Cost: "+string(cost))
+if obj_manager.boss{
+	draw_text(x+50,y,"Cost: "+string(round(cost)/2))
+}else{
+	draw_text(x+50,y,"Cost: "+string(cost))
+}
+
+
+
+
+
+
+
+
 
 
 

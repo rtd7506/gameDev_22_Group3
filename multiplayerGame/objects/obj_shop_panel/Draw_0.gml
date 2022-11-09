@@ -3,7 +3,7 @@
 
 draw_self()
 draw_set_color(c_white)
-draw_set_font(Store_Font_small)
+draw_set_font(pixel_font)
 if place_meeting(x,y,obj_player){
 	
 	if _type == 1{

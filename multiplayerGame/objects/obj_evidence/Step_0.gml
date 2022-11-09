@@ -15,9 +15,11 @@ if grabbed{
 			depth = 0
 			y = 384
 			can_be_grabbed = false
+			audio_play_sound(snd_paper_shred, 1, 0)
 		}else{
 			x_offset = 0
 			y = y_pos
+			audio_stop_sound(snd_paper_shred)
 		}
 		//can_be_grabbed = false
 		//depth = 300
