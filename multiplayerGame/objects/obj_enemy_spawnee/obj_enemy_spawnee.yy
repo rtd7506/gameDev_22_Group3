@@ -3,13 +3,16 @@
   "resourceVersion": "1.0",
   "name": "obj_enemy_spawnee",
   "spriteId": {
-    "name": "spr_enemy_spawnee",
-    "path": "sprites/spr_enemy_spawnee/spr_enemy_spawnee.yy",
+    "name": "spr_bat",
+    "path": "sprites/spr_bat/spr_bat.yy",
   },
   "solid": false,
   "visible": true,
   "managed": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_enemy_spawnee",
+    "path": "sprites/spr_enemy_spawnee/spr_enemy_spawnee.yy",
+  },
   "persistent": false,
   "parentObjectId": {
     "name": "obj_enemy_base",

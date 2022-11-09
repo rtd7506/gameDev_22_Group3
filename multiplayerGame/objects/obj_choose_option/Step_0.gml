@@ -3,9 +3,9 @@
 event_inherited()
 
 if choice{
-	sprite_index = spr_enemy_false
+	sprite_index = spr_bat
 }else{
-	sprite_index = spr_enemy
+	sprite_index = spr_skeleton_idle
 }
 
 if obj_menu.option_next{
