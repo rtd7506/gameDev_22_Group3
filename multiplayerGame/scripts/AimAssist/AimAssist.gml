@@ -17,10 +17,10 @@ function AimAssist(){
 	for (var i = 0; i < array_length(options); ++i;)
 	{
 	    var angle = point_direction(obj_player.x,obj_player.y,options[i].x,options[i].y)
-			if angle < move_dir+assist_range && angle > move_dir-assist_range{
+			if angle < attack_dir+assist_range && angle > attack_dir-assist_range{
 			if best_angle == "undefined"{
 				best_angle = angle
-			}else if angle >= min(move_dir,best_angle) && angle <= max(move_dir,best_angle){
+			}else if angle >= min(attack_dir,best_angle) && angle <= max(attack_dir,best_angle){
 				best_angle = angle
 			}
 		}
@@ -28,11 +28,11 @@ function AimAssist(){
 	}
 	
 	if best_angle == "undefined"{
-		best_angle = move_dir
+		best_angle = attack_dir
 	}
 	/*
 	show_debug_message(string(results))
-	show_debug_message(string(move_dir))
+	show_debug_message(string(attack_dir))
 	show_debug_message(string(best_angle))
 	*/
 	return best_angle

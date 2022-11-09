@@ -94,7 +94,7 @@ if hurt{
 }
 hspd = lengthdir_x(mspd,move_dir)    // find x&y speed by using angle and base speed
 vspd = lengthdir_y(mspd,move_dir)
-if move_dir > 270 || move_dir <= 90{
+if attack_dir > 270 || attack_dir <= 90{
 	image_xscale = 2
 }else{
 	image_xscale = -2
@@ -114,7 +114,54 @@ or hurt{        // if pressing any move keys, move player!
 		sprite_index = spr_player_idle
 		audio_stop_sound(snd_footsteps)
 	}
+	
+	/*
+	if keyboard_check(vk_left){
+		attack_dir = 180
+	}else if keyboard_check(vk_right){
+		attack_dir = 0
+	}else if keyboard_check(vk_up){
+		attack_dir = 270
+	}else if keyboard_check(vk_down){
+		attack_dir = 90
+	}
+	*/
 }
+
+if keyboard_check(vk_up)
+or keyboard_check(vk_right)
+or keyboard_check(vk_down)
+or keyboard_check(vk_left){
+	if keyboard_check(vk_up){ 
+		// 90 degree angle to move up
+	    attack_dir = 90
+	    if keyboard_check(vk_left){
+	        attack_dir += 45                // +45 for up-left
+	    }else
+	    if keyboard_check(vk_right){
+	        attack_dir -= 45                // -45 for up-right
+	    }
+	}else
+	if keyboard_check(vk_down){
+	    attack_dir = 270                    // 270 degree angle to move down
+	    if keyboard_check(vk_left){
+	        attack_dir -= 45                // -45 for down-left
+	    }else
+	    if keyboard_check(vk_right){
+	        attack_dir += 45                // +45 for down-right
+	    }
+	}else{
+	    if keyboard_check(vk_left){
+	        attack_dir = 180                // 180 degree angle to move left
+	    }else
+	    if keyboard_check(vk_right){
+	        attack_dir = 0                // 0 degrees to move right
+	    }
+	}
+}else{
+	attack_dir = move_dir
+}
+
 if hitting{
 	sprite_index = spr_player_swing
 	image_index = slash_anim
@@ -141,12 +188,12 @@ if (keyboard_check_pressed(vk_space) && hitting == false && !place_meeting(x,y,o
 		alarm[0] = 30
 	}else if curr_weapon == "Mace"{
 		hitting = true
-		hit_x = lengthdir_x(slash_dist,move_dir)   
-		hit_y = lengthdir_y(slash_dist,move_dir)
+		hit_x = lengthdir_x(slash_dist,attack_dir)   
+		hit_y = lengthdir_y(slash_dist,attack_dir)
 		var slash = instance_create_depth(x+hit_x,y+hit_y,-1000,obj_swing) //Create slash hitbox
 		slash.hit_x = hit_x
 		slash.hit_y = hit_y
-		slash.image_angle = move_dir+90
+		slash.image_angle = attack_dir+90
 		alarm[0] = 90
 	}
 }

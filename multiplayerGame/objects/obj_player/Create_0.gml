@@ -47,3 +47,10 @@ depth = -100
 
 image_xscale = 2
 image_yscale = 2
+
+attack_dir = 0
+
+//Tutorial Checks
+tutorial_text = ["Use WASD to Move"]
+hasMoved = false
+hasAttacked = false
