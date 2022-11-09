@@ -5,7 +5,7 @@ if charge_count >= charge_max{
 	can_fire = true
 	charge_count = 0
 }else{
-	alarm[2] = fire_rate
+	alarm[2] = fire_cooldown
 }
 
 

@@ -29,7 +29,7 @@ if place_meeting(x,y,obj_projectile_player){
 }
 
 
-if hit{
+if hit && !(object_get_name(object_index) == "obj_gate" && obj_manager.boss){
 	image_blend = c_red
 }else{
 	image_blend = c_white

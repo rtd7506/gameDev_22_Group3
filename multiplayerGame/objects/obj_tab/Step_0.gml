@@ -3,7 +3,7 @@
 
 image_index = _id
 
-if obj_manager.stage == 7 && !obj_manager.shop{
+if obj_manager.stage == 5 && !obj_manager.shop && _id == 1{
 	active = false
 }
 
