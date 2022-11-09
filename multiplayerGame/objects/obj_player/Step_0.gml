@@ -60,7 +60,15 @@ if !hurt && can_be_hurt{
 		}else{
 			_health -= 2
 		}
-		
+	}else if place_meeting(x,y,obj_boss_slash){
+		hurt = true;
+		audio_play_sound(snd_damage, 1, 0)
+		can_be_hurt = false
+		var en = instance_nearest(x,y,obj_enemy_boss)
+		hurt_dir = point_direction(x,y,en.x,en.y)
+		alarm[1] = 10
+		alarm[2] = 30
+		_health -= 2+obj_manager.boss_boost_damage
 	}
 	
 	if (_health < 1){
