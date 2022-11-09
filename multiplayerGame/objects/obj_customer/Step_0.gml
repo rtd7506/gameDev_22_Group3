@@ -22,7 +22,7 @@ if obj_menu.screen == _id{
 	}
 	if leaving{
 		y+=5
-		if y > 545{
+		if y > 515{
 			obj_menu.no_customer = true
 			instance_destroy()
 		}

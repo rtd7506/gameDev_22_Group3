@@ -3,13 +3,16 @@
   "resourceVersion": "1.0",
   "name": "obj_choose_option",
   "spriteId": {
-    "name": "spr_enemy",
-    "path": "sprites/spr_enemy/spr_enemy.yy",
+    "name": "spr_skeleton_idle",
+    "path": "sprites/spr_skeleton_idle/spr_skeleton_idle.yy",
   },
   "solid": false,
   "visible": true,
   "managed": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_enemy",
+    "path": "sprites/spr_enemy/spr_enemy.yy",
+  },
   "persistent": false,
   "parentObjectId": {
     "name": "obj_menu_item",

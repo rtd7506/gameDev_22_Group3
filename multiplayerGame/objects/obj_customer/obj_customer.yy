@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_customer",
   "spriteId": {
-    "name": "spr_enemy",
-    "path": "sprites/spr_enemy/spr_enemy.yy",
+    "name": "spr_skeleton_d_idle",
+    "path": "sprites/spr_skeleton_d_idle/spr_skeleton_d_idle.yy",
   },
   "solid": false,
   "visible": true,

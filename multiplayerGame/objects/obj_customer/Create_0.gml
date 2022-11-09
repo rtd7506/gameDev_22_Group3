@@ -10,6 +10,6 @@ end_y = 416
 active = false
 leaving = false
 
-image_xscale = 6
-image_yscale = 6
+image_xscale = 7
+image_yscale = 7
 
