@@ -1,6 +1,7 @@
 event_inherited();
 
-if keyboard_check(ord("W")){        // 90 degree angle to move up
+if keyboard_check(ord("W")){ 
+	// 90 degree angle to move up
     move_dir = 90
     if keyboard_check(ord("A")){
         move_dir += 45                // +45 for up-left
@@ -103,6 +104,7 @@ or hurt{        // if pressing any move keys, move player!
 }else{
 	if !hitting{
 		sprite_index = spr_player_idle
+		audio_stop_sound(snd_footsteps)
 	}
 }
 if hitting{
