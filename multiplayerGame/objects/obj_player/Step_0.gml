@@ -43,8 +43,10 @@ if !hurt && can_be_hurt{
 		alarm[2] = 30
 		if obj_manager.boss = true{
 			_health -= 0.5
+			obj_stat_manager.m_damageDealt += 0.5
 		}else{
 			_health -= 1
+			obj_stat_manager.m_damageDealt += 1
 		}
 	/*}else if collision_circle(x,y+4,24,obj_enemy,false,false){ //Detect when hurt by enemy
 		
@@ -81,8 +83,10 @@ if !hurt && can_be_hurt{
 		alarm[2] = 30
 		if obj_manager.boss = true{
 			_health -= 1
+			obj_stat_manager.m_damageDealt += 1
 		}else{
 			_health -= 2
+			obj_stat_manager.m_damageDealt += 2
 		}
 	}
 	
@@ -95,6 +99,7 @@ if !hurt && can_be_hurt{
 		_health = health_max
 		_lives -= 1
 		if _lives < 1{
+			obj_stat_manager.p_stagesReached = obj_manager.stage
 			room_goto(rm_end)
 		}
 	}

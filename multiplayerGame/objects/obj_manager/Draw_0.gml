@@ -12,6 +12,10 @@ if showStage{
 	draw_set_color(c_white)
 	draw_set_font(title_font)
 	draw_set_halign(fa_center);
-	draw_text(384,352,"Stage "+string(stage))
+	if stage == 5{
+		draw_text(384,352,"FINAL STAGE")
+	}else{
+		draw_text(384,352,"Stage "+string(stage))
+	}
 	draw_set_halign(fa_left);
 }

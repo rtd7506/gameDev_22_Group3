@@ -14,8 +14,10 @@ if place_meeting(x,y,obj_player){
 	obj_player.alarm[2] = 30
 	if obj_manager.boss = true{
 		obj_player._health -= 1
+		obj_stat_manager.m_damageDealt += 1
 	}else{
 		obj_player._health -= 2
+		obj_stat_manager.m_damageDealt += 2
 	}
 	instance_destroy()
 }

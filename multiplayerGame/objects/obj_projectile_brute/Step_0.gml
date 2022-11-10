@@ -8,8 +8,10 @@ if place_meeting(x,y,obj_gate) || place_meeting(x,y,obj_no_move) || (place_meeti
 if place_meeting(x,y,obj_player){
 	if obj_manager.boss = true{
 		obj_player._health -= 0.5+damage
+		obj_stat_manager.m_damageDealt += 0.5+damage
 	}else{
 		obj_player._health -= 1+damage
+		obj_stat_manager.m_damageDealt += 1+damage
 	}
 	instance_destroy()
 }

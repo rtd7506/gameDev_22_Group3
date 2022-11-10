@@ -53,6 +53,7 @@
     {"id":{"name":"spr_skeleton_u_attack","path":"sprites/spr_skeleton_u_attack/spr_skeleton_u_attack.yy",},"order":8,},
     {"id":{"name":"obj_boss_shop","path":"objects/obj_boss_shop/obj_boss_shop.yy",},"order":24,},
     {"id":{"name":"spr_player_idle","path":"sprites/spr_player_idle/spr_player_idle.yy",},"order":0,},
+    {"id":{"name":"obj_stat_manager","path":"objects/obj_stat_manager/obj_stat_manager.yy",},"order":35,},
     {"id":{"name":"spr_menu","path":"sprites/spr_menu/spr_menu.yy",},"order":9,},
     {"id":{"name":"spr_shop_item","path":"sprites/spr_shop_item/spr_shop_item.yy",},"order":18,},
     {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},"order":7,},
