@@ -43,7 +43,7 @@
     "name": "spr_bat",
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 30.0,
+    "playbackSpeed": 18.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

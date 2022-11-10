@@ -22,7 +22,7 @@ var rx = irandom_range(0,2)
 var ry = irandom_range(0,2)
 for (var i = 0; i<3;i++){  //Create food items for sc3
 	for (var j = 0; j<3;j++){ 
-		var option = instance_create_depth(857+96*i,316+96*j,0,obj_choose_option)
+		var option = instance_create_depth(857+96*i,268+96*j,0,obj_choose_option)
 		if i == rx && j == ry{
 			option.choice = true
 		}else{
@@ -43,7 +43,7 @@ for (var i = 0; i<3;i++){  //Create food items for sc2
 	instance_create_depth(880-8*i,304+8*i,0,obj_evidence)
 }
 
-instance_create_depth(864,288,0,obj_document)
+instance_create_depth(864,240,0,obj_document)
 new_doc = false
 //instance_create_depth(960,545,301,obj_customer)
 doc_count = 0
@@ -62,7 +62,7 @@ for (var i = 0; i<rep;i++){
 task_progress = 0
 
 for (var i = 0; i<3;i++){
-	var boss_shop = instance_create_depth(832,288+96*i,0,obj_boss_shop)
+	var boss_shop = instance_create_depth(832,240+96*i,0,obj_boss_shop)
 	boss_shop._type = i
 }
 

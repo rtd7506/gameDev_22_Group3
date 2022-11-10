@@ -56,6 +56,12 @@ move_anim = spr_player_d_move
 attack_anim = spr_player_d_attack
 
 //Tutorial Checks
-tutorial_text = ["Use WASD to Move","Press SPACE to attack","Use the Arrow Keys to Aim","Destroy all the _____ to escape","Press Q to switch weapons"]
+tutorial_text = ["Use WASD to Move","Press SPACE to attack","Use the Arrow Keys to Aim","Destroy all the gates to escape"]
 hasMoved = false
+hasAimed = false
 hasAttacked = false
+hasGated = false
+hasCashed = false
+hasSwitched = false
+showSwitch = false
+tutorial_progress = 0

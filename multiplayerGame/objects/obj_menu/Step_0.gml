@@ -48,7 +48,7 @@ if next_task{
 }
 
 if new_doc{
-	instance_create_depth(864,288,0,obj_document)
+	instance_create_depth(864,240,0,obj_document)
 	new_doc = false
 }
 

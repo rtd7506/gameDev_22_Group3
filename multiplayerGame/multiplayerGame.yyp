@@ -61,6 +61,7 @@
     {"id":{"name":"spr_swing","path":"sprites/spr_swing/spr_swing.yy",},"order":20,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"spr_crank_back","path":"sprites/spr_crank_back/spr_crank_back.yy",},"order":32,},
+    {"id":{"name":"obj_boss_visual","path":"objects/obj_boss_visual/obj_boss_visual.yy",},"order":27,},
     {"id":{"name":"spr_skeleton_d_attack","path":"sprites/spr_skeleton_d_attack/spr_skeleton_d_attack.yy",},"order":5,},
     {"id":{"name":"obj_menu_enemy_spawner","path":"objects/obj_menu_enemy_spawner/obj_menu_enemy_spawner.yy",},"order":9,},
     {"id":{"name":"spr_skeleton_slash","path":"sprites/spr_skeleton_slash/spr_skeleton_slash.yy",},"order":9,},

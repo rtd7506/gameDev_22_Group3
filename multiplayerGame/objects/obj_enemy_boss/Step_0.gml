@@ -7,7 +7,7 @@ if hit{
 	move_dir = hit_dir
 	mspd = -1.25 //Hit knockback
 }else{
-	if mspd < 0.25{
+	if mspd < 1+obj_manager.boss_boost_speed{
 		mspd+=0.25
 	}
 	//move_dir = point_direction(x,y,obj_player.x,obj_player.y) //Move towards player

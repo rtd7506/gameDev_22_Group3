@@ -4,7 +4,7 @@
 event_inherited()
 
 value = 10
-mspd = 0.25+obj_manager.boss_boost_speed
+mspd = 0.25+obj_manager.boss_boost_speed //0.25
 _health = 30+obj_manager.boss_boost_health
 health_max = _health
 
@@ -31,3 +31,6 @@ attacking = false
 attack_delay = 60
 attack_dir = 0
 swing = 0
+
+showText = true
+alarm[6] = 120

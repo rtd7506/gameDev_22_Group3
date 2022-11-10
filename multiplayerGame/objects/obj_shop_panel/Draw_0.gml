@@ -42,6 +42,9 @@ if place_meeting(x,y,obj_player){
 			}
 			obj_player.show_switch_text = true
 			obj_player.curr_weapon = obj_player.weapon_inventory[obj_player.curr_slot]
+			if !obj_player.hasSwitched{
+				obj_player.showSwitch = true
+			}
 			obj_player.alarm[3] = 60
 			audio_play_sound(snd_buy,10,false,1,0,1) 
 			instance_destroy()

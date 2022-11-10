@@ -17,5 +17,8 @@ if obj_manager.shop{
 if place_meeting(x,y,obj_player){
 	audio_play_sound(snd_collect,10,false,1,0,1) 
 	PLAYER_MONEY += 10+floor(obj_manager.stage/3)*5
+	if obj_player.tutorial_progress == 4 && !obj_player.hasCashed{
+		obj_player.hasCashed = true
+	}
 	instance_destroy()
 }

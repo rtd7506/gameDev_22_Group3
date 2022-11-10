@@ -3,7 +3,11 @@
 
 event_inherited()
 
-cost = cost_base + (instance_number(enemy)*25)
+if obj_manager.boss{
+	cost = floor((cost_base+instance_number(enemy)*25)/2)
+}else{
+	cost = cost_base + (instance_number(enemy)*25)
+}
 
 if MONEY >= cost{
 	can_be_grabbed = true

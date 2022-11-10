@@ -149,6 +149,9 @@ or hurt{        // if pressing any move keys, move player!
 	if !hitting{
 		sprite_index = move_anim
 	}
+	if !hasMoved{
+		hasMoved = true
+	}
 }else{
 	if !hitting{
 		sprite_index = idle_anim
@@ -172,6 +175,9 @@ if keyboard_check(vk_up)
 or keyboard_check(vk_right)
 or keyboard_check(vk_down)
 or keyboard_check(vk_left){
+	if !hasAimed{
+		hasAimed = true
+	}
 	if keyboard_check(vk_up){ 
 		// 90 degree angle to move up
 	    attack_dir = 90
@@ -208,6 +214,9 @@ if hitting{
 }
 
 if (keyboard_check_pressed(vk_space) && hitting == false && !place_meeting(x,y,obj_shop_panel)){
+	if !hasAttacked{
+		hasAttacked = true
+	}
 	if curr_weapon == "Sword"{
 		hitting = true
 		image_index = 0
