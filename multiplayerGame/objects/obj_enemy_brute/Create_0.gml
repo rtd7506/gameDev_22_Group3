@@ -11,3 +11,4 @@ health_max = _health
 fire_rate = 120
 can_fire = true 
 proj_speed = 6
+attacking = false
