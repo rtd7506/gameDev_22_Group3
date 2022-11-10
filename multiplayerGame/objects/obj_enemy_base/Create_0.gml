@@ -22,4 +22,3 @@ can_be_hit = true
 _health = 3
 health_max = _health
 
-obj_stat_manager.m_enemiesSpawned += 1

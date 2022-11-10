@@ -9,6 +9,7 @@ if place_meeting(x,y,obj_player){
 		if obj_manager.stage == 6{
 			obj_stat_manager.p_endLives = obj_player._lives
 			obj_stat_manager.p_stagesReached = 5
+			obj_stat_manager.p_victoryBonus = 1
 			room_goto(rm_end)
 		}
 		for (var i=0; i < 3; i++){

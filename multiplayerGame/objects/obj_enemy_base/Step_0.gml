@@ -8,6 +8,7 @@ if place_meeting(x,y,obj_slash) && !hit && can_be_hit{ //Detect hit
 	alarm[0] = 5
 	alarm[1] = 40
 	_health -= 2+obj_player.damage_boost
+	obj_stat_manager.p_damageDealt += 2+obj_player.damage_boost
 }
 
 if place_meeting(x,y,obj_swing) && !hit && can_be_hit{ //Detect hit
@@ -17,6 +18,7 @@ if place_meeting(x,y,obj_swing) && !hit && can_be_hit{ //Detect hit
 	alarm[0] = 5
 	alarm[1] = 60
 	_health -= 3+obj_player.damage_boost
+	obj_stat_manager.p_damageDealt += 3+obj_player.damage_boost
 }
 
 if place_meeting(x,y,obj_projectile_player){
@@ -26,6 +28,7 @@ if place_meeting(x,y,obj_projectile_player){
 	instance_destroy(proj)
 	alarm[0] = 5
 	_health -= 1+obj_player.damage_boost
+	obj_stat_manager.p_damageDealt += 1+obj_player.damage_boost
 }
 
 
