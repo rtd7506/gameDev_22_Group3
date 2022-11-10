@@ -23,6 +23,11 @@ if mouse_check_button_pressed(mb_left){ //Do all mouse interactions
 			var menu_en = instance_create_depth(x,y,-1000,menu_vis.type)
 			menu_en.grabbed = true
 		}
+		/*
+		if obj_manager.shop{
+			grab_task = true
+		}
+		*/
 	}
 	if place_meeting(x,y,obj_tab){ //collision_circle(mouse_x,mouse_y,1,obj_tab,false,false)
 		var tab = instance_position(x,y,obj_tab)

@@ -12,3 +12,21 @@ if active{
 }else{
 	image_blend = c_grey
 }
+
+if _id == 0 && obj_menu.screen != 0{
+	if MONEY > 750{
+		image_blend = c_yellow
+	}
+}
+
+if _id == 1 && obj_menu.screen != 1{
+	if MONEY < 75{
+		image_blend = c_yellow
+	}
+}
+
+if _id == 2 && obj_menu.screen != 2{
+	if obj_manager.stage > 3 && obj_menu.hasBossed{
+		image_blend = c_yellow
+	}
+}

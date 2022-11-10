@@ -26,6 +26,12 @@ if grabbed {
 			grabbed = false
 			instance_destroy()
 		}
+		
+	}
+	if obj_manager.shop{
+		obj_cursor.grab_task = true
+	}else{
+		obj_cursor.grab_task = false
 	}
 	
 }

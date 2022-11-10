@@ -16,6 +16,8 @@ if place_meeting(x,y,obj_player){
 		instance_destroy(obj_enemy_base)
 		obj_manager.shop = true
 		obj_manager.done = false
+		obj_manager.showStage = true
+		obj_manager.alarm[3] = 60
 		instance_destroy()
 	}else{
 		obj_manager.shop = false
