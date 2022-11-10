@@ -90,6 +90,14 @@ if mouse_check_button_pressed(mb_left){ //Do all mouse interactions
 		var stick = instance_nearest(x,y,obj_joystick)
 		stick.wrangled = true
 	}
+	if place_meeting(x,y,obj_manager_ready){
+		var button = instance_nearest(x,y,obj_manager_ready)
+		if button.ready{
+			button.ready = false
+		}else{
+			button.ready = true
+		}
+	}
 }
 
 if mouse_check_button(mb_left){

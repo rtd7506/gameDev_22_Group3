@@ -20,3 +20,4 @@ cost = cost_base
 type = obj_menu_enemy
 enemy = obj_enemy
 name = "ENEMY"
+main_font = font_add("Pixel Coleco.otf",16,false,false,32,128)

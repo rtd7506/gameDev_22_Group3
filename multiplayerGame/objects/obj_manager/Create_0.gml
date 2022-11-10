@@ -48,3 +48,5 @@ boss = false
 boss_boost_health = 0
 boss_boost_damage = 0
 boss_boost_speed = 0
+
+hasTurreted = false
