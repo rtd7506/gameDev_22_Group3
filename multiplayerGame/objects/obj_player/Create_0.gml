@@ -65,3 +65,5 @@ hasCashed = false
 hasSwitched = false
 showSwitch = false
 tutorial_progress = 0
+
+main_font = font_add("Pixel Coleco.otf",16,false,false,32,128)

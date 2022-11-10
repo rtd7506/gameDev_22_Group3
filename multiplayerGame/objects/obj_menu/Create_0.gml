@@ -79,3 +79,7 @@ for (var i = 0; i<2;i++){
 }
 
 task_blurbs = ["Drag the proper food to the customer","Click the odd one out","Drag the evidence into the shredder","Drag the cursor to sign important documents","Turn the crank counterclockwise"]
+
+main_font = font_add("Pixel Coleco.otf",16,false,false,32,128)
+
+hasBossed = false

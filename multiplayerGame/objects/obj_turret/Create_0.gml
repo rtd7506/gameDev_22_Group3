@@ -14,3 +14,4 @@ charge_max = 4
 charge_count = 0
 fire_count = 0
 charge_stages = [c_red,c_green,c_yellow,c_orange]
+main_font = font_add("Pixel Coleco.otf",14,false,false,32,128)

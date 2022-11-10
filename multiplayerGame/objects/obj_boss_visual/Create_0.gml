@@ -9,3 +9,5 @@ x_pos = x
 
 image_xscale = 3
 image_yscale = 3
+
+main_font = font_add("Pixel Coleco.otf",16,false,false,32,128)

@@ -48,3 +48,9 @@ boss = false
 boss_boost_health = 0
 boss_boost_damage = 0
 boss_boost_speed = 0
+
+hasTurreted = false
+ui_font = font_add("Pixel Coleco.otf",16,false,false,32,128)
+title_font = font_add("Pixel Coleco.otf",20,false,false,32,128)
+
+showStage = false

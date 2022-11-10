@@ -62,4 +62,7 @@ if screen == 2{
 }
 if screen == 3{
 	image_index = 7
+	if obj_manager.stage > 3 && !hasBossed{
+		hasBossed = true
+	}
 }
