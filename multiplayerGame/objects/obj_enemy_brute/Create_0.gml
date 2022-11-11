@@ -5,7 +5,7 @@ event_inherited()
 
 value = 10
 mspd = 0.25
-_health = 10
+_health = 5
 health_max = _health
 
 fire_rate = 120

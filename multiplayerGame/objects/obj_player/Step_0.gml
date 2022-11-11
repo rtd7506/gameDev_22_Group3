@@ -240,7 +240,7 @@ if (keyboard_check_pressed(vk_space) && hitting == false && !place_meeting(x,y,o
 		hit_y = lengthdir_y(shot_dist,shot_dir)
 		var shot = instance_create_depth(x+hit_x,y+hit_y,-1000,obj_projectile_player)
 		shot.move_dir = shot_dir
-		shot.image_angle = shot_dir+90
+		shot.image_angle = shot_dir//+90
 		alarm[0] = 30
 	}else if curr_weapon == "Mace"{
 		hitting = true

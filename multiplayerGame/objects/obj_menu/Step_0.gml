@@ -14,7 +14,7 @@ if no_customer == true{
 		cust_count = -1
 	}else{
 		no_customer = false
-		alarm[0] = irandom_range(60,180)
+		alarm[0] = irandom_range(30,60)
 	}
 }
 

@@ -26,9 +26,9 @@ attack_anim = spr_boss_d_attack
 hurt_anim = spr_boss_d_hurt
 
 attempting_attack = false
-attack_chance = 2
+attack_chance = 1
 attacking = false
-attack_delay = 60
+attack_delay = 30
 attack_dir = 0
 swing = 0
 

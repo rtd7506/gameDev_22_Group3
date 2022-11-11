@@ -3,13 +3,16 @@
   "resourceVersion": "1.0",
   "name": "obj_enemy_brute",
   "spriteId": {
-    "name": "spr_enemy_brute",
-    "path": "sprites/spr_enemy_brute/spr_enemy_brute.yy",
+    "name": "spr_goblin_d_idle",
+    "path": "sprites/spr_goblin_d_idle/spr_goblin_d_idle.yy",
   },
   "solid": false,
   "visible": true,
   "managed": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_enemy_brute",
+    "path": "sprites/spr_enemy_brute/spr_enemy_brute.yy",
+  },
   "persistent": false,
   "parentObjectId": {
     "name": "obj_enemy_base",
@@ -33,6 +36,7 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":2,"eventType":2,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":3,"eventType":2,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],

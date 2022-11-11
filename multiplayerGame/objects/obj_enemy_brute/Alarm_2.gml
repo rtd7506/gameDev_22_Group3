@@ -4,4 +4,4 @@
 can_fire = true
 
 
-attacking = false
+//attacking = false

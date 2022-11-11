@@ -35,12 +35,13 @@ hspd = lengthdir_x(mspd,move_dir)
 vspd = lengthdir_y(mspd,move_dir)
 
 MoveCollide()
-
+show_debug_message(attacking)
 if can_fire { 
 	can_fire = false
 	attacking = true
+	image_index = 0
 	alarm[2] = fire_rate 
-	
+	/*
 	var _dir = point_direction(x,y,obj_player.x,obj_player.y)
 	var _spd = proj_speed
 	
@@ -51,10 +52,31 @@ if can_fire {
 		image_angle = _dir
 		damage = 0
 	} 
+	alarm[3] = 20
+	*/
 }
 
 if !attacking{
 	sprite_index = move_anim
 }else{
 	sprite_index = attack_anim
+	if image_speed > 0{
+		if image_index > image_number - 1{
+			attacking = false
+		}
+		if image_index == 4{
+			alarm[2] = fire_rate 
+	
+			var _dir = point_direction(x,y,obj_player.x,obj_player.y)
+			var _spd = proj_speed
+	
+			var _inst = instance_create_layer(x,y,"Instances",obj_projectile_brute)
+			with _inst { 
+				speed = _spd
+				direction = _dir
+				image_angle = _dir
+				damage = 0
+			} 
+		}
+	}
 }
