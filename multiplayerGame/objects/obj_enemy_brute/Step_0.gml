@@ -13,13 +13,32 @@ if hit{
 	move_dir = point_direction(x,y,obj_player.x,obj_player.y) //Move towards player
 }
 
+if move_dir < 135 && move_dir > 45{
+	move_anim = spr_goblin_u_move
+	attack_anim = spr_goblin_u_attack
+	dir = 0
+}else if move_dir < 45 || move_dir > 315{
+	move_anim = spr_goblin_r_move
+	attack_anim = spr_goblin_r_attack
+	dir = 1
+}else if move_dir < 315 && move_dir > 225{
+	move_anim = spr_goblin_d_move
+	attack_anim = spr_goblin_d_attack
+	dir = 2
+}else if move_dir < 225 && move_dir > 135{
+	move_anim = spr_goblin_l_move
+	attack_anim = spr_goblin_l_attack
+	dir = 3
+}
+
 hspd = lengthdir_x(mspd,move_dir)
 vspd = lengthdir_y(mspd,move_dir)
 
 MoveCollide()
 
 if can_fire { 
-	can_fire = false 
+	can_fire = false
+	attacking = true
 	alarm[2] = fire_rate 
 	
 	var _dir = point_direction(x,y,obj_player.x,obj_player.y)
@@ -32,4 +51,10 @@ if can_fire {
 		image_angle = _dir
 		damage = 0
 	} 
+}
+
+if !attacking{
+	sprite_index = move_anim
+}else{
+	sprite_index = attack_anim
 }

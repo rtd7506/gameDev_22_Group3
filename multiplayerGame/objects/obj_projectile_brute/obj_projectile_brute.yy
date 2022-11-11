@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_projectile_brute",
   "spriteId": {
-    "name": "spr_projectile_brute",
-    "path": "sprites/spr_projectile_brute/spr_projectile_brute.yy",
+    "name": "spr_goblin_projetile",
+    "path": "sprites/spr_goblin_projetile/spr_goblin_projetile.yy",
   },
   "solid": false,
   "visible": true,

@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_menu_enemy_brute_vis",
   "spriteId": {
-    "name": "spr_enemy_brute",
-    "path": "sprites/spr_enemy_brute/spr_enemy_brute.yy",
+    "name": "spr_goblin_idle",
+    "path": "sprites/spr_goblin_idle/spr_goblin_idle.yy",
   },
   "solid": false,
   "visible": true,
