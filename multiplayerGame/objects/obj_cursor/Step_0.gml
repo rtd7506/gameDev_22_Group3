@@ -89,6 +89,7 @@ if mouse_check_button_pressed(mb_left){ //Do all mouse interactions
 				obj_manager.boss_boost_speed += 0.25
 			}
 			boss_shop.uses+=1
+			obj_stat_manager.m_bossUpgrades+=1
 		}
 	}
 	if place_meeting(x,y,obj_joystick){

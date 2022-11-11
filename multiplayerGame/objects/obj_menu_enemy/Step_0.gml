@@ -16,6 +16,7 @@ if grabbed {
 				cost = floor(cost_base/2)
 			}
 			MONEY -= cost
+			obj_stat_manager.m_enemiesSpawned += 1
 			audio_play_sound(snd_buy, 1, 0)
 			instance_destroy()
 		}

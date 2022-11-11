@@ -7,6 +7,9 @@ if place_meeting(x,y,obj_player){
 	if !obj_manager.shop{
 		obj_manager.stage += 1
 		if obj_manager.stage == 6{
+			obj_stat_manager.p_endLives = obj_player._lives
+			obj_stat_manager.p_stagesReached = 5
+			obj_stat_manager.p_victoryBonus = 1
 			room_goto(rm_end)
 		}
 		for (var i=0; i < 3; i++){
@@ -16,8 +19,6 @@ if place_meeting(x,y,obj_player){
 		instance_destroy(obj_enemy_base)
 		obj_manager.shop = true
 		obj_manager.done = false
-		obj_manager.showStage = true
-		obj_manager.alarm[3] = 60
 		instance_destroy()
 	}else{
 		obj_manager.shop = false
@@ -38,6 +39,8 @@ if place_meeting(x,y,obj_player){
 			obj_manager.alarm[1] = 240
 		}
 		obj_manager.done = false
+		obj_manager.showStage = true
+		obj_manager.alarm[3] = 60
 		instance_destroy()
 	}
 	

@@ -3,6 +3,7 @@
 event_inherited()
 
 if grabbed{
+	//audio_play_sound(snd_paper_pickup, 2, 0)
 	x_offset = mouse_x-x_pos
 	y = mouse_y
 	depth = -100
@@ -19,7 +20,7 @@ if grabbed{
 		}else{
 			x_offset = 0
 			y = y_pos
-			audio_stop_sound(snd_paper_shred)
+			audio_stop_sound(snd_paper_pickup)
 		}
 		//can_be_grabbed = false
 		//depth = 300

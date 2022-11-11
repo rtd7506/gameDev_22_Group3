@@ -45,6 +45,7 @@ if next_task{
 		task_progress = 0
 	}
 	game_screen = order[task_progress]
+	obj_stat_manager.m_tasksCompleted += 1
 }
 
 if new_doc{
@@ -59,10 +60,10 @@ if game_screen == 3 && screen == 1 && doc_count > 4{
 
 if screen == 2{
 	image_index = 1
-}
-if screen == 3{
-	image_index = 7
 	if obj_manager.stage > 3 && !hasBossed{
 		hasBossed = true
 	}
+}
+if screen == 3{
+	image_index = 7
 }

@@ -5,5 +5,9 @@ if obj_manager.stage == 5{//.boss
 }
 event_inherited()
 
-
+if obj_player.y < y{
+	depth = -10000
+}else{
+	depth = 0
+}
 

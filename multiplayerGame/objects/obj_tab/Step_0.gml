@@ -26,7 +26,7 @@ if _id == 1 && obj_menu.screen != 1{
 }
 
 if _id == 2 && obj_menu.screen != 2{
-	if obj_manager.stage > 3 && obj_menu.hasBossed{
+	if obj_manager.stage > 3 && !obj_menu.hasBossed{
 		image_blend = c_yellow
 	}
 }

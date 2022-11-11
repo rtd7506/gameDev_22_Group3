@@ -43,8 +43,10 @@ if !hurt && can_be_hurt{
 		alarm[2] = 30
 		if obj_manager.boss = true{
 			_health -= 0.5
+			obj_stat_manager.m_damageDealt += 0.5
 		}else{
 			_health -= 1
+			obj_stat_manager.m_damageDealt += 1
 		}
 	/*}else if collision_circle(x,y+4,24,obj_enemy,false,false){ //Detect when hurt by enemy
 		
@@ -71,6 +73,7 @@ if !hurt && can_be_hurt{
 		alarm[1] = 10
 		alarm[2] = 30
 		_health -= 2+obj_manager.boss_boost_damage
+		obj_stat_manager.m_damageDealt += 2+obj_manager.boss_boost_damage
 	}else if place_meeting(x,y,obj_enemy_slash){
 		hurt = true;
 		audio_play_sound(snd_damage, 1, 0)
@@ -81,8 +84,10 @@ if !hurt && can_be_hurt{
 		alarm[2] = 30
 		if obj_manager.boss = true{
 			_health -= 1
+			obj_stat_manager.m_damageDealt += 1
 		}else{
 			_health -= 2
+			obj_stat_manager.m_damageDealt += 2
 		}
 	}
 	
@@ -95,6 +100,8 @@ if !hurt && can_be_hurt{
 		_health = health_max
 		_lives -= 1
 		if _lives < 1{
+			obj_stat_manager.p_stagesReached = obj_manager.stage
+			obj_stat_manager.m_victoryBonus = 1
 			room_goto(rm_end)
 		}
 	}

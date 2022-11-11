@@ -89,5 +89,4 @@ if can_attack{
 if point_distance(x,y,obj_player.x,obj_player.y) < 200 && !attempting_attack && !attacking{
 	alarm[4] = 60
 	attempting_attack = true
-	show_debug_message("ATTACK")
 }
