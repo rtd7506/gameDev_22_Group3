@@ -2,7 +2,7 @@
 // You can write your code in this editor
 event_inherited()
 
-cost = 200
+cost = 150
 cost_base = cost
 type = obj_enemy_brute
 offset = 16

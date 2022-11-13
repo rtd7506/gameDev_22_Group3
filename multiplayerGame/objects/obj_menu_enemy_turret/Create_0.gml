@@ -3,7 +3,7 @@
 
 event_inherited()
 
-cost = 200
+cost = 250
 cost_base = cost
 type = obj_turret
 offset = 16

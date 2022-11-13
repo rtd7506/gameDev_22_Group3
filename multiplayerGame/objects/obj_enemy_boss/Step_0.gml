@@ -6,6 +6,9 @@ event_inherited()
 if hit{
 	move_dir = hit_dir
 	mspd = -1.25 //Hit knockback
+	if showText{
+		showText = false
+	}
 }else{
 	if mspd < 1+obj_manager.boss_boost_speed{
 		mspd+=0.25

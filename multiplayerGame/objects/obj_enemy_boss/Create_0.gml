@@ -33,4 +33,4 @@ attack_dir = 0
 swing = 0
 
 showText = true
-alarm[6] = 120
+//alarm[6] = 120

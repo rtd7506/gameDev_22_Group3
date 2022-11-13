@@ -4,7 +4,7 @@ event_inherited()
 _health = 6
 health_max = _health
 value = 20
-fire_cooldown = 60
+fire_cooldown = 30
 fire_rate = 20
 can_fire = true 
 proj_speed = 6
