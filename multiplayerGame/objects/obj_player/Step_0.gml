@@ -41,12 +41,12 @@ if !hurt && can_be_hurt{
 		hurt_dir = point_direction(x,y,en.x,en.y)
 		alarm[1] = 10
 		alarm[2] = 30
-		if obj_manager.boss = true{
-			_health -= 0.5
-			obj_stat_manager.m_damageDealt += 0.5
-		}else{
+		if obj_manager.boss == true{
 			_health -= 1
 			obj_stat_manager.m_damageDealt += 1
+		}else{
+			_health -= 2
+			obj_stat_manager.m_damageDealt += 2
 		}
 	/*}else if collision_circle(x,y+4,24,obj_enemy,false,false){ //Detect when hurt by enemy
 		
@@ -83,11 +83,11 @@ if !hurt && can_be_hurt{
 		alarm[1] = 10
 		alarm[2] = 30
 		if obj_manager.boss = true{
-			_health -= 1
-			obj_stat_manager.m_damageDealt += 1
-		}else{
 			_health -= 2
 			obj_stat_manager.m_damageDealt += 2
+		}else{
+			_health -= 3
+			obj_stat_manager.m_damageDealt += 3
 		}
 	}
 	
@@ -220,7 +220,7 @@ if hitting{
 	image_index = slash_anim
 }
 
-if (keyboard_check_pressed(vk_space) && hitting == false && !place_meeting(x,y,obj_shop_panel)){
+if (keyboard_check_pressed(vk_space) && hitting == false && !place_meeting(x,y,obj_shop_panel) && !place_meeting(x,y,obj_shop_reroll)){
 	if !hasAttacked{
 		hasAttacked = true
 	}

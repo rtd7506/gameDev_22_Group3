@@ -12,6 +12,7 @@ if place_meeting(x,y,obj_player){
 			obj_stat_manager.p_victoryBonus = 1
 			room_goto(rm_end)
 		}
+		instance_create_layer(576,496,"Instances",obj_shop_reroll)
 		for (var i=0; i < 3; i++){
 			//var shop_panel = 
 			instance_create_layer(192,240+i*128,"Instances",obj_shop_panel)
@@ -23,6 +24,7 @@ if place_meeting(x,y,obj_player){
 	}else{
 		obj_manager.shop = false
 		instance_destroy(obj_shop_panel)
+		instance_destroy(obj_shop_reroll)
 		for (var i=0; i < 2; i++){
 			for (var j=0; j < 2; j++){
 				//var gate = 
