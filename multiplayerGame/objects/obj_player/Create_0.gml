@@ -29,7 +29,7 @@ _health = 10
 health_max = _health
 
 curr_slot = 0
-weapon_inventory = ["Sword"]//,"Crossbow","Mace"]
+weapon_inventory = ["Sword","Mace"]//,"Crossbow","Mace"]
 curr_weapon = weapon_inventory[curr_slot]
 //weapon_names = ["Sword","Crossbow","Mace"]
 show_switch_text = false

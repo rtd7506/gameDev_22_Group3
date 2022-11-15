@@ -238,14 +238,31 @@ if (keyboard_check_pressed(vk_space) && hitting == false && !place_meeting(x,y,o
 		var shot_dir = AimAssist()
 		hit_x = lengthdir_x(shot_dist,shot_dir)   
 		hit_y = lengthdir_y(shot_dist,shot_dir)
+		
+			
+			
 		var shot = instance_create_depth(x+hit_x,y+hit_y,-1000,obj_projectile_player)
 		shot.move_dir = shot_dir
 		shot.image_angle = shot_dir//+90
 		alarm[0] = 30
 	}else if curr_weapon == "Mace"{
 		hitting = true
-		hit_x = lengthdir_x(slash_dist,attack_dir)   
-		hit_y = lengthdir_y(slash_dist,attack_dir)
+		hit_x = -lengthdir_x(slash_dist,attack_dir)   
+		hit_y = -lengthdir_y(slash_dist,attack_dir)
+		if attacking_dir == 0{
+			hit_x = 20
+			hit_y = -10
+		}else if attacking_dir == 1{
+			hit_x = -lengthdir_x(slash_dist,attack_dir)   
+			hit_y = -lengthdir_y(slash_dist,attack_dir)
+		}else if attacking_dir == 2{
+			hit_x = -20
+			hit_y = -20
+		}else if attacking_dir == 3{
+			hit_x = -15
+			hit_y = -10
+		}
+
 		var slash = instance_create_depth(x+hit_x,y+hit_y,-1000,obj_swing) //Create slash hitbox
 		slash.hit_x = hit_x
 		slash.hit_y = hit_y
