@@ -1,8 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-image_xscale = 4
-image_yscale = 4
+step+=1
+y = baseY + (5*sin(step/30))
 
-baseY = y
-step = 0
+//show_debug_message(current_time)

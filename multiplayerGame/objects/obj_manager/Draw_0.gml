@@ -15,7 +15,7 @@ if showStage{
 	if stage == 5{
 		draw_text(384,352,"FINAL STAGE")
 	}else{
-		draw_text(384,352,"Stage "+string(stage))
+		draw_text(384,352,"Stage "+string(stage+1))
 	}
 	draw_set_halign(fa_left);
 }
