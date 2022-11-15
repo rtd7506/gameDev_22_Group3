@@ -35,7 +35,7 @@ hspd = lengthdir_x(mspd,move_dir)
 vspd = lengthdir_y(mspd,move_dir)
 
 MoveCollide()
-show_debug_message(attacking)
+//show_debug_message(attacking)
 if can_fire { 
 	can_fire = false
 	attacking = true
