@@ -156,6 +156,7 @@
     {"id":{"name":"spr_goblin_d_idle","path":"sprites/spr_goblin_d_idle/spr_goblin_d_idle.yy",},"order":1,},
     {"id":{"name":"spr_player_u_attack","path":"sprites/spr_player_u_attack/spr_player_u_attack.yy",},"order":5,},
     {"id":{"name":"spr_player_r_move","path":"sprites/spr_player_r_move/spr_player_r_move.yy",},"order":8,},
+    {"id":{"name":"snd_ready","path":"sounds/snd_ready/snd_ready.yy",},"order":18,},
     {"id":{"name":"obj_menu_item","path":"objects/obj_menu_item/obj_menu_item.yy",},"order":5,},
     {"id":{"name":"obj_title","path":"objects/obj_title/obj_title.yy",},"order":39,},
     {"id":{"name":"spr_exit","path":"sprites/spr_exit/spr_exit.yy",},"order":15,},

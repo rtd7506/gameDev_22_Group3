@@ -31,6 +31,7 @@ if mouse_check_button_pressed(mb_left){ //Do all mouse interactions
 	}
 	if place_meeting(x,y,obj_tab){ //collision_circle(mouse_x,mouse_y,1,obj_tab,false,false)
 		var tab = instance_position(x,y,obj_tab)
+		audio_play_sound(snd_tab, 1, 0)
 		if !instance_position(x,y,obj_tab){
 			tab = instance_nearest(x,y,obj_tab)
 		}
@@ -69,6 +70,7 @@ if mouse_check_button_pressed(mb_left){ //Do all mouse interactions
 	}
 	if place_meeting(x,y,obj_crank){
 		var crank = instance_nearest(x,y,obj_crank)
+		audio_play_sound(snd_crank, 1, 0)
 		if !crank.stop {
 			crank.cranking = true
 		}
@@ -109,6 +111,7 @@ if mouse_check_button_pressed(mb_left){ //Do all mouse interactions
 if mouse_check_button(mb_left){
 	if place_meeting(x,y,obj_document)&& !collision_circle(x,y,0.5,obj_ink,false,false){ //  
 		instance_create_depth(x,y,-1000,obj_ink)
+		audio_play_sound(snd_paper_sign,10,false,1,0,random_range(0.75,1.5)) 
 	}
 }
 
