@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-var _dir = image_angle 
+var _dir = image_angle
 var _inst = instance_create_layer(x,y,"Instances",obj_projectile)
 with _inst { 
 	speed = obj_turret.proj_speed 

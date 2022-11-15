@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_menu_enemy_turret",
   "spriteId": {
-    "name": "spr_turret",
-    "path": "sprites/spr_turret/spr_turret.yy",
+    "name": "spr_turret1",
+    "path": "sprites/spr_turret1/spr_turret1.yy",
   },
   "solid": false,
   "visible": true,

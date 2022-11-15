@@ -21,7 +21,7 @@ if can_fire {
 	var _inst = instance_create_layer(x,y,"Instances",obj_projectile)
 	with _inst { 
 		speed = obj_turret.proj_speed 
-		direction = _dir
+		direction = _dir 
 		image_angle = _dir
 	} 
 	fire_count+=1
